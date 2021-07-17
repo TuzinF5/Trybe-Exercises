@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+GitHub
+HTML
+CSS
+JavaScript
+Python
