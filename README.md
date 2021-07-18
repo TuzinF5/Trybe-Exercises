@@ -8,15 +8,15 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ​
 ## Fundamentos do Desenvolvimento Web :white_check_mark:
 ​
-##### Bloco 1: Introdução - Unix & Shell
+##### Bloco 1: Introdução - Unix & Bash
 ​
-- [x] 1-3: _Unix & Shell- Part 1_
-- [x] 1-4: _Unix & Shell- Part 2_
+- [x] 1-3: _Unix & Bash - Part 1_
+- [x] 1-4: _Unix & Bash - Part 2_
 ​
-##### Bloco 2: Git & GitHub
+##### Bloco 2: Git, GitHub e Internet
 ​
-- [x] 2-1: _O que é e para que serve?_
-- [ ] 2-2: _Entendendo os comandos_
+- [x] 2-1: _Git & GitHub - O que é e para que serve?_
+- [ ] 2-2: _Git & GitHub - Entendendo os comandos_
 - [ ] 2-3: _Internet - Entendendo como ela funciona_
 ​
 ##### Bloco 3: Introdução - HTML & CSS
@@ -25,9 +25,9 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [ ] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [ ] 3-4: _HTML Semântico_
-- [ ] 3-5: _[Projeto - HTML & CSS]()_
+- [ ] 3-5: _[Projeto - Lessons Learned]()_
 ​
-##### Bloco 4: Introdução - JavaScript
+##### Bloco 4: Introdução - JavaScript e Lógica de Programação
 ​
 - [ ] 4-1: _JavaScript - Primeiros passos_
 - [ ] 4-2: _JavaScript - Array e loop For_
@@ -35,49 +35,49 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 4-4: _JavaScript - Objetos e funções_
 - [ ] 4-5: _[Projeto - Playground Functions]()_
 ​
-##### Bloco 5: Introdução - JavaScript - Projetos
+##### Bloco 5: JavaScript: Dom, Eventos e Web Storage
 ​
 - [ ] 5-1: _JavaScript - DOM e seletores_
 - [ ] 5-2: _JavaScript - Trabalhando com elementos_
 - [ ] 5-3: _JavaScript - Eventos_
 - [ ] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Meme Generator]()_
-- [ ] 5-6: _[Projeto - Arte com Pixels]()_
-- [ ] 5-7: _[Projeto - Lista de tarefas]()_
+- [ ] 5-5: _[Projeto - Arte com Pixels]()_
+- [ ] 5-6: _[Projeto - Lista de tarefas]()_
+- [ ] 5-7: _[Projeto - Meme Generator]()_
 - [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 ​
-##### Bloco 6: HTML & CSS avançado
+##### Bloco 6: HTML & CSS: Forms, Flexbox e Responsivo
 ​
 - [ ] 6-1: _HTML & CSS - Forms_
 - [ ] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
 - [ ] 6-3: _CSS Flexbox - Part 1_
 - [ ] 6-4: _CSS Flexbox - Part 2_
 - [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - Página inicial do Facebook]()_
+- [ ] 6-6: _[Projeto - Trybewarts]()_
 ​
-##### Bloco 7: JavaScript ES6 & Testes Unitários
+##### Bloco 7: Introdução - JavaScript ES6 & Testes Unitários
 ​
 - [ ] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [ ] 7-2: _JavaScript ES6 - Objects_
 - [ ] 7-3: _Testes unitários em JavaScript_
 - [ ] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 ​
-##### Bloco 8: JavaScript ES6
+##### Bloco 8: Higher Order Functions do JavaScript ES6
 ​
-- [ ] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [ ] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [ ] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
-- [ ] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [ ] 8-5: _[Projeto - Zoo functions]()_
+- [ ] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
+- [ ] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
+- [ ] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
+- [ ] 8-5: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
+- [ ] 8-6: _[Projeto - Zoo functions]()_
 ​
-##### Bloco 9: Assincronicidade & Callbacks
+##### Bloco 9: JavaScript Assíncrono e Promises
 ​
 - [ ] 9-1: _JavaScript Assí­ncrono e Callbacks_
 - [ ] 9-2: _JavaScript Promises_
 - [ ] 9-3: _[Projeto - Carrinho de Compras]()_
 ​
-##### Bloco 10: Jest
+##### Bloco 10: Testes automatizados com Jest
 ​
 - [ ] 10-1: _Primeiros passos no Jest_
 - [ ] 10-2: _Jest - Testes Assí­ncronos_
@@ -92,57 +92,57 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 11-2: _Componentes React_
 - [ ] 11-3: _[Projeto - Movie Cards Library]()_
 ​
-##### Bloco 12: React
+##### Bloco 12: Componentes com Estado, Eventos e Formulários com React
 ​
-- [ ] 12-1: _Components com estado_
-- [ ] 12-2: _Eventos e formulários no React_
+- [ ] 12-1: _Components com estado e eventos_
+- [ ] 12-2: _Formulários no React_
 - [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
 ​
-##### Bloco 13: React
+##### Bloco 13: Ciclo de Vida de Componentes e React Router
 ​
-- [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [ ] 13-2: _Ciclo de vida de componentes em React_
-- [ ] 13-3: _React Router_
-- [ ] 13-4: _[Projeto - Movie Cards Library CRUD]()_
+- [ ] 13-1: _Ciclo de vida de componentes_
+- [ ] 13-2: _React Router_
+- [ ] 13-3: _[Projeto - Movie Cards Library CRUD]()_
 ​
 ##### Bloco 14: Metodologias Ágeis
 ​
 - [ ] 14-1: _Metodologias Ágeis_
 - [ ] 14-2: _[Projeto - Frontend Online Store]()_
 ​
-##### Bloco 15: Testes em React
+##### Bloco 15: Testes automatizados com React Testing Library
 ​
-- [ ] 15-1: _Testando React com a React Testing Library_
-- [ ] 15-2: _Testando React com a React Testing Library - Parte 2_
-- [ ] 15-3: _[Projeto - Testes em React]()_
+- [ ] 15-1: _RTL - Primeiros Passos_
+- [ ] 15-2: _RTL - Mocks e Inputs_
+- [ ] 15-3: _RTL - Testando React Router_
+- [ ] 15-4: _[Projeto - Testes em React]()_
 ​
-##### Bloco 16: Introdução ao Redux
+##### Bloco 16: Gerenciamento de Estado com Redux
 ​
-- [ ] 16-1: _Introdução ao Redux_
-- [ ] 16-2: _React com Redux - Parte 1_
-- [ ] 16-3: _React com Redux - Prática_
-- [ ] 16-4: _React com Redux - Parte 2_
-- [ ] 16-5: _Testes sí­ncronos com React-Redux_
-- [ ] 16-6: _[Projeto - Tabela com filtros de dados]()_
+- [ ] 16-1: _Introdução ao Redux - O estado global da aplicação_
+- [ ] 16-2: _Usando o Redux no React_
+- [ ] 16-3: _Usando o Redux no React - Prática_
+- [ ] 16-4: _RUsando o Redux no React - Actions Assíncronas_
+- [ ] 16-5: _Testes em React-Redux_
+- [ ] 16-6: _[Projeto - Trybe Wallet]()_
 ​
-##### Bloco 17: Projeto React
+##### Bloco 17: Projeto Jogo de Trivia
 ​
 - [ ] 17-1: _[Projeto - Jogo de Trivia]()_
 ​
-##### Bloco 18: React & Context API
+##### Bloco 18: Context API e Reack Hooks
 ​
 - [ ] 18-1: _Context API do React_
 - [ ] 18-2: _React Hooks - useState e useContext_
 - [ ] 18-3: _React Hooks - useEffect e Hooks customizados_
 - [ ] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 ​
-##### Bloco 19: Projeto Final de Front-end
+##### Bloco 19: Projeto App de Receitas
 ​
 - [ ] 19-1: _[Projeto - App de Receitas]()_
 ​
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 ​
-##### Bloco 20: Introdução - Bancos de dados relacionais
+##### Bloco 20: Introdução - SQL
 ​
 - [ ] 20-1: _Banco de dados SQL_
 - [ ] 20-2: _Encontrando dados em um banco de dados_
@@ -150,105 +150,130 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 20-4: _Manipulando tabelas_
 - [ ] 20-5: _[Projeto - All For One]()_
 ​
-##### Bloco 21: Bancos de dados relacionais
+##### Bloco 21: Funções SQL, Joins e Subqueries
 ​
 - [ ] 21-1: _Funções mais usadas no SQL_
 - [ ] 21-2: _Descomplicando JOINs e UNIONs_
 - [ ] 21-3: _Stored Routines & Subqueries_
 - [ ] 21-4: _[Projeto - Vocabulary Booster]()_
 ​
-##### Bloco 22: Bancos de dados relacionais
+##### Bloco 22: Normalização e Modelagem de Banco de Dados
 ​
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
+- [ ] 22-1: _Transformando ideias em um modelo de banco de dados - Parte 1_
 - [ ] 22-2: _Normalização, Formas Normais e Dumps_
 - [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
 - [ ] 22-3: _[Projeto - One For All]()_
 ​
-##### Bloco 23: Introdução - NoSQL
+##### Bloco 23: Introdução - MongoDB
 ​
 - [ ] 23-1: _MongoDB - Introdução_
 - [ ] 23-2: _Filter Operators_
 - [ ] 23-3: _[Projeto - Data Flights]()_
 ​
-##### Bloco 24: Updates
+##### Bloco 24: MongoDB: Updates Simples e Complexos
 ​
 - [ ] 24-1: _Updates Simples_
 - [ ] 24-2: _Updates Complexos - Arrays - Parte 1_
 - [ ] 24-3: _Updates Complexos - Arrays - Parte 2_
 - [ ] 24-4: _[Projeto - Commerce]()_
 ​
-##### Bloco 25: Aggregation Framework
+##### Bloco 25: MongoDB: Aggregation Framework
 ​
 - [ ] 25-1: _Aggregation Framework - Part 1_
 - [ ] 25-2: _Aggregation Framework - Part 2_
 - [ ] 25-3: _[Projeto - Aggregations]()_
 ​
-##### Bloco 26: Intro - NodeJS
+##### Bloco 26: Introdução ao desenvolvimento Web com NodeJS
 ​
 - [ ] 26-1: _NodeJS - Introdução_
 - [ ] 26-2: _NodeJS - Fluxo Assíncrono_
-- [ ] 26-3: _NodeJS - Arquitetura_
-- [ ] 26-4: _[Projeto - A CLI of Ice and Fire]()_
+- [ ] 26-3: _Testes com NodeJS_
+- [ ] 26-4: _Express: HTTP com Node.js_
+- [ ] 26-5: _Praticando Express_
+- [ ] 26-6: _[Projeto - Talker Manager]()_
 ​
-##### Bloco 27: NodeJS
+##### Bloco 27: NodeJS: Camada de Serviço e Arquitetura Rest e Restful
 ​
-- [ ] 27-1: _Express: HTTP com Node.js_
-- [ ] 27-2: _Arquitetura de Software - Introdução ao MVC_
-- [ ] 27-3: _[Projeto - Cookmaster]()_
+- [ ] 27-1: _Arquitetura de Software -Camada de Model_
+- [ ] 27-2: _Arquitetura de Software - Camada de Controller e Service_
+- [ ] 27-3: _Arquitetura Web - Rest e Restful_
+- [ ] 27-4: _Arquitetura de Software - Testando as Camadas_
+- [ ] 27-5: _Projeto - Store Manager_
 ​
-##### Bloco 28: NodeJS
+##### Bloco 28: Autenticação e Upload de Arquivos
 ​
-- [ ] 28-1: _Arquitetura de Software - Camada de Serviço_
-- [ ] 28-2: _Arquitetura web - Rest e Restful_
-- [ ] 28-3: _[Projeto - Store Manager]()_
+- [ ] 28-1: _NodeJS - JWT - (JSON Web Token)_
+- [ ] 28-2: _NodeJS - Upload de arquivos com "multer"_
+- [ ] 28-3: _NodeJS - Testando APIs com Teste de Integração_
+- [ ] 28-4: _[Projeto - Cookmaster]()_
 ​
-##### Bloco 29: NodeJS
+##### Bloco 29: Deployment
 ​
-- [ ] 29-1: _NodeJS - JWT - (JSON Web Token)_
-- [ ] 29-2: _NodeJS - Upload de arquivos com Multer_
-- [ ] 29-3: _[Projeto - Cookmaster V2]()_
+- [ ] 29-1: _Introdução - Deploy_
+- [ ] 29-1: _Infraestrutura - Deploy com Heroku_
+- [ ] 29-2: _Deploy - Gerenciadores de Processos_
+- [ ] 29-3: _[Projeto - Stranger Things]()_
 ​
-##### Bloco 30: Introdução - Deploy
+##### Bloco 30: Arquitetura: SOLID e ORM
 ​
-- [ ] 30-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
+- [ ] 30-1: _Arquitetura - Princípios SOLID_
+- [ ] 30-2: _ORM - Interface da aplicação com o banco de dados_
+- [ ] 30-3: _ORM - Associations_
+- [ ] 30-4: _[Projeto - API de Blogs]()_
 ​
-##### Bloco 31: Projeto
+##### Bloco 31: Sockets
 ​
-- [ ] 31-1: _[Projeto - Trybeer]()_
+- [ ] 31-:1 _Arquitetura de Software - Camada de View_
+- [ ] 31-:2 _Sockets - TCP/UDP & NET_
+- [ ] 31-:3 _Sockets - Socket.io_
+- [ ] 31-:4 _Sockets - Praticando Socket.io_
+- [ ] 31-:5 _[Projeto - Webchat]()_
 ​
-##### Bloco 32: Arquitetura de Software
+##### Bloco 32: Projeto Tryber
 ​
-- [ ] 32-1: _Arquitetura - Princí­pios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
-- [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
-​
-##### Bloco 33: Sockets
-​
-- [ ] 30-1: _Sockets - TCP/UDP & NET_
-- [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
-​
-##### Bloco 34: Projeto
-​
-- [ ] 34-1: _[Projeto - Trybeer V2]()_
-​
+- [ ] 32-1: _Projeto - Tryber_
+
 ## Ciência da Computação :hourglass_flowing_sand:
 ​
-##### Bloco 35: Introdução - Ciência da Computação
+##### Bloco 33: Arquitetura de Computadores e Redes
 ​
-- [ ] 35-1: _Arquitetura de Computadores_
-- [ ] 35-2: _Arquitetura de redes_
-- [ ] 35-3: _Redes de computadores, ferramentas e segurança_
-- [ ] 35-4: _[Projeto - Explorando os protocolos]()_
+- [ ] 30-1: _Arquitetura de Computadores_
+- [ ] 30-2: _Arquitetura de redes_
+- [ ] 30-3: _Redes de computadores, ferramentas e segurança_
+- [ ] 30-4: _[Projeto - Explorando os protocolos]()_
 ​
-##### Bloco 36: Python
+##### Bloco 34: Introdução à Python e Raspagem de Dados da Web
 ​
-- [ ] 35-1: _Aprendendo Python_
-- [ ] 35-2: _Testes e Exceções_
-- [ ] 35-3: _Entrada e Saí­da de dados_
-- [ ] 36-4: _Entrada e Saí­da de dados_
-- [ ] 35-5: _[Projeto - Tech news]()_
+- [ ] 34-1: _Aprendendo Python_
+- [ ] 34-2: _Entrada e Saída de Dados_
+- [ ] 34-3: _Raspagem de Dados_
+- [ ] 34-4: _Testes_
+- [ ] 34-5: _[Projeto - Tech News]()_
+
+##### Bloco 35: Programação Orientada a Objetos e Padrões de Projeto
+​
+- [ ] 35-1: _Introdução à programação orientada a objetos_
+- [ ] 35-2: _Herança, Composição e Interfaces_
+- [ ] 35-3: _Padrões de projeto_
+- [ ] 35-4: _[Projeto - Relatórios de Estoque]()_
+​
+##### Bloco 36: Algoritmos e Estrutura de Dados
+
+- [ ] 35-1: _Complexidade de Algoritmos_
+- [ ] 35-2: _Recursividade e Estratégias para solução de problemas_
+- [ ] 35-3: _Algoritmos de ordenação e busca_
+- [ ] 35-5: _[Projeto - Algoritmos]()_
+
+##### Bloco 37: Estrutura de Dados: Hash e Set
+
+- [ ] 35-1: _Arrays_
+- [ ] 35-2: _Hashmap e dict_
+- [ ] 35-3: _Set_
+- [ ] 35-5: _[Projeto - Restaurant Orders]()_
+
+##### Bloco 38: Estrutura de Dados: Pilhas, Filas e Listas
+
+- [ ] 35-1: _Nó e Listas Encadeadas_
+- [ ] 35-2: _Deque_
+- [ ] 35-3: _Pilhas_
+- [ ] 35-5: _[Projeto - TING - Trybe Is Not Google]()_
