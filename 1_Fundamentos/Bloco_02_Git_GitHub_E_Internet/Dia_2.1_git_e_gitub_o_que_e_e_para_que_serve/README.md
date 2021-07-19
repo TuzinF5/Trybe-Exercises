@@ -123,10 +123,10 @@ Não há nada de errado com essa lógica: ela funciona, mas convenhamos que dá 
 Vamos ver como funciona? Execute a sequência de comandos abaixo:
 
 Copiar
-##### Como o xclip não vem instalado por padrão na maioria das distribuições, precisaremos instalá-lo usando o comando a seguir:
+#### Como o xclip não vem instalado por padrão na maioria das distribuições, precisaremos instalá-lo usando o comando a seguir:
 sudo apt-get install xclip
 
-##### Agora utilize o comando abaixo para copiar o conteúdo da sua chave id_rsa.pub
+#### Agora utilize o comando abaixo para copiar o conteúdo da sua chave id_rsa.pub
 #### Para garantir que o conteúdo foi copiado dê Ctrl + V em um editor de texto
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
@@ -145,7 +145,7 @@ Entre no seu GitHub e siga os passos abaixo:
 - Caso seja solicitado, confirme sua senha do Github.
 
 
-# Parte 4 - O seu repositório no GitHub
+## Parte 4 - O seu repositório no GitHub
 
 Pronto! Agora que você já é capaz de gerenciar localmente seus códigos e também enviá-los para o GitHub , é hora de colocar a casa em ordem!
 
