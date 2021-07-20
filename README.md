@@ -17,7 +17,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 ​
 - [x] 2-1: _Git & GitHub - O que é e para que serve?_
 - [x] 2-2: _Git & GitHub - Entendendo os comandos_
-- [ ] 2-3: _Internet - Entendendo como ela funciona_
+- [x] 2-3: _Internet - Entendendo como ela funciona_
 ​
 ##### Bloco 3: Introdução - HTML & CSS
 ​
