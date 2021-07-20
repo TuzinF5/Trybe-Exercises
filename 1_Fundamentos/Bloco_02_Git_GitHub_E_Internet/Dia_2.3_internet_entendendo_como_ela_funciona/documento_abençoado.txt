@@ -1,0 +1,9 @@
+[Post-it][Sala 18][Abençoados por DEUS]
+
+Quando eu digito www.google.com no navegador e aperto ENTER o que acontece até o site aparecer para nós?
+
+    • Comunicação com o DNS, traduzindo o nome do domínio para o endereço IP;
+    • Todos os dados que viajam entre o cliente e o servidor são enviados através da rede Internet usando o protocolo TCP/IP;
+    • Requisição do protocolo HTTP, conectando o cliente ao servidor;
+    • Resposta do servidor, que armazena, processa e retorna os dados solicitados pelo software;
+    • O cliente renderiza os dados recebidos através de pacotes pelo servidor, finalizando o processo.
