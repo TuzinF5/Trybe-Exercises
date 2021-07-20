@@ -16,6 +16,4 @@ Exemplo de diagrama com post-its. Nesta foto os post-its com um ❓ indicam onde
 
 O importante agora é usar a criatividade e trabalhar em equipe para criar um diagrama o mais detalhado possível, utilizando o conhecimento adquirido hoje.
 
-Resultado:
-
-![](/diagrama.png)
+Para conferir o resutado do exercício, só abrir a imagem "diagrama.png" nesta mesma pasta.
