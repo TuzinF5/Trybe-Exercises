@@ -134,6 +134,8 @@ Para fixar
 
 Não se esqueça de dar um PUSH no seu repositório para sincronizá-lo com o GitHub
 
+#### Para conferir o resultado acesse o arquivo "amizades.html" nesta mesma pasta.
+
 # Exercícios
 
 
