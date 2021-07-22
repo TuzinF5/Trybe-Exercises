@@ -1,5 +1,6 @@
 # Conteúdos
 
+
 Para que você aprenda na prática, a partir de agora vamos ter vários conteúdos interativos, por meio dos quais você irá seguir a teoria e fazer exercícios ao mesmo tempo. Vamos lá!
 
 Você irá desenvolver alguns desafios entre os vídeos. Para subi-los para o seu repositório de exercícios, siga as instruções abaixo.
@@ -110,3 +111,25 @@ $ git push
 $ git pull
 
 11. Quando terminar os exercícios, seus códigos devem estar todos commitados na branch exercicios/3.1, e disponíveis no repositório remoto do GitHub. Pra finalizar, compartilhe o link da Pull Request no canal de Code Review para a monitoria e/ou colegas revisarem. Faça review você também, lembre-se que é muito importante para o seu desenvolvimento ler o código de outras pessoas. 🤜🏼🤛🏼
+
+# HTML - Primeiras tags
+
+Para fixar
+
+1 - Crie uma lista das pessoas que você já fez amizade na Trybe.
+
+2 - Adicione uma imagem que venha de uma URL externa.
+
+3 - Adicione uma imagem que está no seu computador, local.
+
+# HTML - Links externos e internos
+
+Para fixar
+
+1 - Crie um parágrafo para cada pessoa da sua lista.
+
+2 - Crie um link entre a sua lista e os parágrafos de pessoas.
+
+3 - Crie um link para a página do Google.
+
+Não se esqueça de dar um PUSH no seu repositório para sincronizá-lo com o GitHub
