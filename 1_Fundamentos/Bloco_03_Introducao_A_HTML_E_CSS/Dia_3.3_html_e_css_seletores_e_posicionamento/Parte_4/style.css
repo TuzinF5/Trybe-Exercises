@@ -35,7 +35,7 @@ ul.linguagem li:nth-child(-n+3) {
     background-color: hotpink;
 }
 
-ul#sites li a:hover {
+#sites li a:hover { /*poderia usar #sites li a[href*="stackoverflow"] { color: orange; }*/ 
     font-weight: bold;    
 }
 
