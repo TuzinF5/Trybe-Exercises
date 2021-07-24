@@ -12,25 +12,6 @@ DICA: Experimente colocar a propriedade transition nos seus estilos que possuem 
 
 Vamos praticar o que aprendemos.
 
-Copie o código HTML abaixo e faça o que for pedido:
-
-index.html
-
-Copiar
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <title>Agrupando Seletores</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Lista dos Melhores Sites que já vi</h1>
-    <p>Top 3 dos melhores sites que existem na web</p>
-    <p>Principais motivos para eu gostar deles</p>
-  </body>
-</html>
-
 1 - Adicione uma lista ordenada dos 3 melhores sites que você conhece.
 
 2 - Crie um arquivo no mesmo diretório e nomeie-o de 'style.css'.
@@ -48,3 +29,17 @@ Copiar
 5 - No 'style.css', adicione a propriedade 'list-style: none' para ambas as listas.
 
 Dica : Nesse link , você irá encontrar a documentação sobre todas as pseudoclasses do CSS.
+
+## Para fixar II
+
+Para o próximo exercício, você não deve atribuir nenhuma classe ou id aos componentes, mas apenas utilizar pseudoclasses para individualizar cada elemento!
+
+1 - Estilize as divs para que, ao passar o cursor por cima das mesmas, elas ganhem uma borda.
+
+2 - Faça cada div ter uma cor própria.
+
+3 - Estilize cada uma das tags h3 .
+
+4 - Faça a terceira div ser maior que as demais.
+
+5 - Deixe as tags ímpares h3 com o texto em itálico.
