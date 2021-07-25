@@ -16,7 +16,7 @@ Só para exemplificar, se você utilizou a propriedade CSS background-color em a
 
 O box model é composto por algumas partes que formam uma caixa para cada tag HTML que você utiliza. Essa caixa funciona mais ou menos assim:
 
-![](/css-box-model.png)
+![](./css-box-model.png)
 ###### Modelo de Caixas do CSS
 
 A partir dessa imagem, vamos explicar um pouco melhor o que é cada propriedade:
@@ -51,42 +51,19 @@ A margem funciona como um tipo de "campo de força" que expande o elemento para 
 
 Vamos praticar? Primeiro veja o layout de caixas abaixo:
 
-![](/css-box-model-example.png)
+![](./css-box-model-example.png)
 
 Agora vamos reproduzir esse esquema de itens no seu browser! Copie os códigos abaixo e cole-os no seu VS Code, criando um arquivo index.html e um arquivo style.css .
 
 Você provavelmente não conhece algumas das propriedades utilizadas nesse código, mas não tem problema: iremos trabalhá-las mais para frente! Basta se concentrar nas classes que você deve alterar de acordo com as instruções dos comentários.
 
+index.html
+
+![](./exemplo-index.png)
+
 style.css
 
-Copiar
-.caixa {
-  color: white;
-  display: inline-block;
-  line-height: 50px;
-  text-align: center;
-  vertical-align: top;
-}
-
-.width-and-height {
-  height: 50px;
-  width: 50px;
-}
-
-/* insira na classe abaixo um padding de 20px para aplicá-lo aos itens B, C e D */
-.padding {
-
-}
-
-/* insira na classe abaixo uma margem de 30px para aplicá-la aos itens C e D */
-.margin {
-
-}
-
-/* insira na classe abaixo uma borda com valor '5px solid black' para aplicá-la ao item D */
-.border {
-  
-}
+![](./exemplo-style.png)
 
 Se você tiver curiosidade para saber sobre as propriedades display , text-align e vertical-align , sinta-se livre para consultar as documentações do MDN e da W3Schools . Mas não se preocupe, iremos falar melhor sobre posicionamento dos elementos em alguns instantes.
 
