@@ -23,6 +23,7 @@ Dessa vez, cada um deve fazer os exercícios em seu computador, ok? Vamos lá! �
 - Exemplo:
 
 Copiar
+
 O que eu vou aprender na Trybe:
 
 . Unix
