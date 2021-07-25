@@ -12,6 +12,12 @@ DICA: Experimente colocar a propriedade transition nos seus estilos que possuem 
 
 Vamos praticar o que aprendemos.
 
+Copie o código HTML abaixo e faça o que for pedido:
+
+index.html
+
+![](./exemplo-index.png)
+
 1 - Adicione uma lista ordenada dos 3 melhores sites que você conhece.
 
 2 - Crie um arquivo no mesmo diretório e nomeie-o de 'style.css'.
@@ -28,11 +34,13 @@ Vamos praticar o que aprendemos.
 
 5 - No 'style.css', adicione a propriedade 'list-style: none' para ambas as listas.
 
-Dica : Nesse link , você irá encontrar a documentação sobre todas as pseudoclasses do CSS.
-
 ## Para fixar II
 
 Para o próximo exercício, você não deve atribuir nenhuma classe ou id aos componentes, mas apenas utilizar pseudoclasses para individualizar cada elemento!
+
+index.html
+
+![](./exemplo-index-2.png)
 
 1 - Estilize as divs para que, ao passar o cursor por cima das mesmas, elas ganhem uma borda.
 
