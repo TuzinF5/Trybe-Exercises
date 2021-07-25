@@ -12,6 +12,7 @@ Vamos começar realizando a instalação e configuração do Git . Siga o passo 
 Para instalar o Git abra o seu terminal e digite o seguinte comando:
 
 Copiar
+
 sudo apt-get install git-all
 
 #### macOS
@@ -19,11 +20,13 @@ sudo apt-get install git-all
 Para instalar o Git abra o seu terminal e digite o seguinte comando:
 
 Copiar
+
 brew install git
 
 Caso você não possua o brew instalado digite o comando abaixo no seu terminal e após a instalação execute novamente o comando acima:
 
 Copiar
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 #### Configuração
@@ -36,6 +39,7 @@ O primeiro passo é configurar sua identidade, seu nome e endereço de e-mail, i
 - É preciso que o e-mail informado seja o mesmo que você utilizará para criar a sua conta no GitHub
 
 Copiar
+
 git config --global user.name "Seu nome"
 git config --global user.email seuemail@exemplo.br
 
@@ -44,10 +48,12 @@ git config --global user.email seuemail@exemplo.br
 Um outro ponto legal de se configurar é o editor onde você poderá abrir o arquivo de configuração do Git , .gitconfig , fica fácil de você visualizar as configurações do Git e também adicionar outras que julgue necessário. Para isso execute o comando à seguir no seu terminal:
 
 Copiar
+
 git config --global core.editor "code --wait"
 - Esse comando define o editor do .gitconfig como o VS Code , que é o editor que você usará ao longo curso. Caso queira abrir o arquivo de configuração no VS Code basta executar em seu terminal o comando abaixo. Para isso certifique-se que você se encontra no diretório onde o arquivo .gitconfig está localizado.
 
 Copiar
+
 code .gitconfig
 
 #### Verificando a instalação e a configuração
@@ -59,12 +65,14 @@ No terminal:
 - Seu terminal deve conter algo parecido com:
 
 Copiar
+
 git version 2.x.y
 
 - Digite git config --list
 - Seu terminal deve conter algo similar a isso:
 
 Copiar
+
 user.email=seuemail@gmail.com
 user.name=seunome
 - O email deve ser o mesmo que você utilizou para se registrar no GitHub
@@ -87,16 +95,19 @@ Abra seu terminal e digite o comando abaixo. Ele cria uma nova chave SSH, usando
 - É preciso que o e-mail informado seja o mesmo que você utilizou para criar a sua conta no GitHub
 
 Copiar
+
 ssh-keygen -t rsa -b 4096 -C "seuemail@gmail.com"
 
 Durante o processo irá aparecer escrito no terminal Enter a file in which to save the key , quando isso acontecer pressione Enter para aceitar a localização padrão /home/you/.ssh/id_rsa .
 
 Copiar
+
 Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
 
 Agora você deve digitar uma senha segura.
 
 Copiar
+
 Enter passphrase (empty for no passphrase): [Type a passphrase]
 Enter same passphrase again: [Type passphrase again]
 
@@ -105,11 +116,13 @@ Enter same passphrase again: [Type passphrase again]
 Primeiro você deve iniciar o ssh-agent em background:
 
 Copiar
+
 eval "$(ssh-agent -s)"
 
 Agora você deve adicionar sua chave privada SSH ao ssh-agent . Para isso execute o comando abaixo no terminal:
 
 Copiar
+
 ssh-add ~/.ssh/id_rsa
 
 #### Adicionando a chave SSH na sua conta do GitHub
@@ -123,16 +136,20 @@ Não há nada de errado com essa lógica: ela funciona, mas convenhamos que dá 
 Vamos ver como funciona? Execute a sequência de comandos abaixo:
 
 Copiar
+
 #### Como o xclip não vem instalado por padrão na maioria das distribuições, precisaremos instalá-lo usando o comando a seguir:
+
 sudo apt-get install xclip
 
 #### Agora utilize o comando abaixo para copiar o conteúdo da sua chave id_rsa.pub
 #### Para garantir que o conteúdo foi copiado dê Ctrl + V em um editor de texto
+
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
 Caso o xclip não funcione, execute o comando abaixo e copie manualmente a saída do terminal.
 
 Copiar
+
 cat ~/.ssh/id_rsa.pub
 
 Entre no seu GitHub e siga os passos abaixo:
@@ -154,6 +171,7 @@ Antes de começar, siga as instruções da página sobre Portfólio de Exercíci
 Durante seu curso na Trybe , seus projetos serão entregues através de pushes nos repositórios do GitHub . Para podermos simular um exercício feito, você criará um arquivo .txt com um nome de sua escolha (Exemplo: trybe-skills.txt ) e utilizará o conteúdo abaixo.
 
 Copiar
+
 O que eu vou aprender na Trybe:
 
 - Unix
@@ -163,6 +181,7 @@ O que eu vou aprender na Trybe:
 No final, ao executar o comando ls -l na pasta de arquivos deste dia, você deverá receber um retorno parecido com:
 
 Copiar
+
 ls -l
 
 total 0
@@ -175,6 +194,7 @@ Agora vamos transformar essa pasta em um repositório Git :
 - Crie um commit inicial utilizando:
 
 Copiar
+
 git add .
 git commit -m "Initial commit"
 
@@ -186,6 +206,7 @@ git commit -m "Initial commit"
 - Verifique se tudo está certo com sua URL remota utilizando o comando git remote -v . Seu terminal deve conter algo similar a isso:
 
 Copiar
+
 origin  git@github.com:john-snow/know-nothing.git (fetch)
 origin  git@github.com:john-snow/know-nothing.git (push)
 
