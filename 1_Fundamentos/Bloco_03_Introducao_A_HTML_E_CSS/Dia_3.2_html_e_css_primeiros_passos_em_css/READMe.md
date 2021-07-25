@@ -1,6 +1,10 @@
 # Introdução ao CSS
 
-Para fixar
+#### Para fixar
+
+index.html
+
+![](./exemplo-index.png)
 
 1 - Modifique o tamanho do h1 para 65 pixels
 
@@ -14,7 +18,11 @@ Não se esqueça de dar um PUSH no seu repositório para sincronizá-lo com o Gi
 
 # Propriedades de texto no CSS
 
-Para fixar
+#### Para fixar
+
+index.html
+
+![](./exemplo-index-2.png)
 
 1 - Modifique o família do h1 para sans-serif
 
@@ -28,10 +36,18 @@ Para fixar
 
 6 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto
 
+![Link de referência para propriedades de texto em CSS](ww.w3schools.com/css/css_text.asp)
+
 Não se esqueça de dar um PUSH no seu repositório para sincronizá-lo com o GitHub!
 
 # CSS inline e externo
 
-Para fixar
+#### Para fixar
+
+index.html
+
+![](./exemplo-index-3.png)
 
 1 - Coloque todo o CSS criado até agora nos exercícios anteriores em um arquivo externo.
+
+Não se esqueça de dar um PUSH no seu repositório para sincronizá-lo com o GitHub
