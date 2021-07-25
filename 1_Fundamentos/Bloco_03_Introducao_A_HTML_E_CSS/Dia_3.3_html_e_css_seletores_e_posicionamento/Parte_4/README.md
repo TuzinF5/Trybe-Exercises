@@ -5,6 +5,10 @@ Neste ponto, você já aprendeu sobre o modelo de caixas, sobre como posicionar 
 
 E aí? Viu o quão incrível o CSS pode ser?! Agora, para fixar ainda mais o conteúdo, vamos exercitar.
 
+index.html
+
+![](./exemplo-index.png)
+
 Crie o arquivo style.css e resolva os seguintes exercícios:
 
 1 - Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado ÍMPAR, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).
