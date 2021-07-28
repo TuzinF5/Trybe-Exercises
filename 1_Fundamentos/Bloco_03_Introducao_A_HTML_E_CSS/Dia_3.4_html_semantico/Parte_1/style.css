@@ -23,7 +23,7 @@ ul {
   height: 50px;
   text-align: center;
   width: 300px;
-  margin-left: 350px;
+  margin-left: 380px;
 }
 
 .third {
@@ -46,6 +46,14 @@ ul {
   display: inline-block;
 }
 
-.premiacao ul li:nth-child(odd) {
-  margin-left: 350px;
+#primeiro {
+  margin-left: 370px;
+}
+
+#segundo {
+  margin-left: 384px;
+}
+
+#terceiro {
+  margin-left: 383px;
 }
