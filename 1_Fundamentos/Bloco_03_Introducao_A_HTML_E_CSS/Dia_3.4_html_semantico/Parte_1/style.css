@@ -2,13 +2,18 @@ h1 {
   text-align: center;
 }
 
+ul {
+  padding: 0px 0px 0px 0px;
+}
+
 .first {
   background-color: rgb(235, 200, 84);
   font-size: 20px;
   height: 50px;
   text-align: center;
   width: 200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   list-style: none;  
 }
 
@@ -18,7 +23,7 @@ h1 {
   height: 50px;
   text-align: center;
   width: 300px;
-  margin-left: 350px;
+  margin-left: 380px;
 }
 
 .third {
@@ -41,6 +46,14 @@ h1 {
   display: inline-block;
 }
 
-.premiacao ul li:nth-child(odd) {
-  margin-left: 350px;
+#primeiro {
+  margin-left: 370px;
+}
+
+#segundo {
+  margin-left: 384px;
+}
+
+#terceiro {
+  margin-left: 383px;
 }
