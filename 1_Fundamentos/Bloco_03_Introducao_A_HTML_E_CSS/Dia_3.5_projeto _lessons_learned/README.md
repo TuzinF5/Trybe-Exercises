@@ -20,4 +20,6 @@ Desenvolvi um site que contém uma série de informações sobre o que aprendi n
 
 - Desenvolvi uma página HTML estilizada com CSS. Através desta aplicação, foi possível realizar a construção de código HTML, posicionamento e estilização CSS.
 
+### Para conferir os requisitos que foram pedidos [clique aqui](./README-REQUISITOS.md)
+
 ## Resultado do [Projeto - Lessons Learned](https://tuzinf5.github.io/Project-Lessons-Learned/)
