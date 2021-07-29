@@ -132,5 +132,3 @@ if (num4 % 2 === 1 || num5 % 2 === 1 || num6 % 2 === 1) {
 } else {
   console.log("false");
 }
-
-// exercício 10
