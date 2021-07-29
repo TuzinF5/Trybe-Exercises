@@ -25,7 +25,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [x] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [x] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [x] 3-4: _HTML Semântico_
-- [x] 3-5: _[Projeto - Lessons Learned]()_
+- [x] 3-5: _[Projeto - Lessons Learned](https://tuzinf5.github.io/Project-Lessons-Learned/)_
 ​
 ##### Bloco 4: Introdução - JavaScript e Lógica de Programação
 ​
