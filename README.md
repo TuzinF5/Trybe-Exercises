@@ -1,6 +1,6 @@
 # Trybe
 ​
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Arthur Teixeira](Linkedin em processo)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por mim _[Arthur Teixeira](https://www.linkedin.com/in/arthur-teixeira-440376218/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
 ​ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."_
 
@@ -25,13 +25,13 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [x] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [x] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [x] 3-4: _HTML Semântico_
-- [x] 3-5: _[Projeto - Lessons Learned](https://tuzinf5.github.io/Project-Lessons-Learned/)_
+- [x] 3-5: _[Projeto - Lessons Learned](https://github.com/TuzinF5/Projects-Completed-at-Trybe/tree/master/Project-Lessons-Learned)_
 ​
 ##### Bloco 4: Introdução - JavaScript e Lógica de Programação
 ​
 - [x] 4-1: _JavaScript - Primeiros passos_
-- [ ] 4-2: _JavaScript - Array e loop For_
-- [ ] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
+- [x] 4-2: _JavaScript - Array e loop For_
+- [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [ ] 4-4: _JavaScript - Objetos e funções_
 - [ ] 4-5: _[Projeto - Playground Functions]()_
 ​
