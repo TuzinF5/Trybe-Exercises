@@ -63,3 +63,5 @@ Spoiler-alert : para os exercícios do dia, os métodos split , join e reverse p
 - verificaFimPalavra('joaofernando', 'fernan') ;
 
 - Retorno esperado: false
+
+### [Exercícios resolvidos](./script.js)
