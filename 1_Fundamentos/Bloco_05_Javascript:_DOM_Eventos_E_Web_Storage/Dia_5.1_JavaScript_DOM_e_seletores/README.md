@@ -10,7 +10,8 @@
 
 4. Leia as instruções que estão dentro de um comentário na tag _script_ .
 
-copiar 
+copiar
 
 ![](./exemplo.png)
 
+### [Exercícios resolvidos](./script.js)
