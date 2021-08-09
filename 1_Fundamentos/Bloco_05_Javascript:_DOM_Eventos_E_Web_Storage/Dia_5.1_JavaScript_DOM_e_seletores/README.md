@@ -14,4 +14,4 @@ copiar
 
 ![](./exemplo.png)
 
-### [Exercícios resolvidos](./script.js)
+### [Exercícios resolvidos](./exercise.html)
