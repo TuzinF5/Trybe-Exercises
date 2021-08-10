@@ -121,16 +121,11 @@
     }
 
     // 9
-    function criaH3(params) {
-      let resultado;
-      for (let index = 1; index < 4; index += 1) {
-        let tagH3 = document.createElement("h3")
-        tagH3.innerText = "Sou H3"
-        resultado = document.querySelector("main").appendChild(tagH3)
-      }
-      return resultado
+    for (let index = 1; index < 4; index += 1) {
+      let tagH3 = document.createElement("h3")
+      tagH3.innerText = "Sou H3"
+      document.querySelector("main").appendChild(tagH3)
     }
-    criaH3()
 
     // EXERCÍCIOS PARTE II
 
@@ -138,6 +133,10 @@
     tagH1.className = "title"
 
     // 2
+    let tagsH3 = document.getElementsByTagName("h3")
+    for (let index = 0; index < tagsH3.length; index += 1) {
+      tagsH3[index].className = "description"
+    }
 
     // 3
     tagMain.removeChild(tagSection2)
