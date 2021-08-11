@@ -72,3 +72,16 @@ addClassHoliday(daysLi);
 addClassFriday(daysLi);
 
 // EXERCÍCIO 2
+let divButtons = document.querySelector(".buttons-container");
+let feriados = "Feriados";
+
+function createButton(stringHolidays) {
+  let button = document.createElement("button");
+  button.innerText = stringHolidays;
+  button.id = "btn-holiday";
+  divButtons.appendChild(button);
+}
+
+createButton(feriados);
+
+// EXERCÍCIO 3
