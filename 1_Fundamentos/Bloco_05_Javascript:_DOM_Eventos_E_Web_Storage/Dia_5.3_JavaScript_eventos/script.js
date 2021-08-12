@@ -75,14 +75,14 @@ addClassFriday(daysLi);
 
 let divButtons = document.querySelector('.buttons-container');
 
-function createButton(stringHolidays) {
+function createButtonHoliday(stringHolidays) {
   let button = document.createElement('button');
   button.innerText = stringHolidays;
   button.id = 'btn-holiday';
   divButtons.appendChild(button);
 }
 
-createButton('Feriados');
+createButtonHoliday('Feriados');
 
 // EXERCÍCIO 3
 
@@ -103,3 +103,14 @@ function changeBackgroundColor() {
 button.addEventListener('click', changeBackgroundColor);
 
 // EXERCÍCIO 4
+
+function createButtonFriday(stringHolidays) {
+  let button = document.createElement('button');
+  button.innerText = stringHolidays;
+  button.id = 'btn-friday';
+  divButtons.appendChild(button); //variavel já criada na linha 76
+}
+
+createButtonFriday('Sexta-Feira');
+
+// EXERCÍCIO 5
