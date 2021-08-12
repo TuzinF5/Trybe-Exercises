@@ -91,7 +91,11 @@ let button = document.querySelector('#btn-holiday');
 function changeBackgroundColor() {
   let holiday = document.querySelectorAll('.holiday');
   for (let index = 0; index < holiday.length; index += 1) {
-    holiday[index].style.backgroundColor = 'aqua';
+    if (holiday[index].style.color === '') {
+      holiday[index].style.color = 'aqua';
+    } else {
+      holiday[index].style.color = '';
+    }
   }
 }
 
@@ -122,4 +126,3 @@ function changeStyle() {
 buttonFriday.addEventListener('click', changeStyle);
 
 // EXERCÍCIO 6
-
