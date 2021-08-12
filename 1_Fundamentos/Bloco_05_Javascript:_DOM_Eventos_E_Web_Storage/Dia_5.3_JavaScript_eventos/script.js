@@ -111,6 +111,7 @@ createButtonFriday('Sexta-Feira');
 // EXERCÍCIO 5
 
 let buttonFriday = document.querySelector('#btn-friday');
+
 function changeStyle() {
   let friday = document.querySelectorAll('.friday');
   for (let index = 0; index < friday.length; index += 1) {
@@ -119,3 +120,6 @@ function changeStyle() {
 }
 
 buttonFriday.addEventListener('click', changeStyle);
+
+// EXERCÍCIO 6
+
