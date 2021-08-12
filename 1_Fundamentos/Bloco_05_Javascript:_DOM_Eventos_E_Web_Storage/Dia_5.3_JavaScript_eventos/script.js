@@ -93,20 +93,15 @@ function changeBackgroundColor() {
   for (let index = 0; index < holiday.length; index += 1) {
     holiday[index].style.backgroundColor = 'aqua';
   }
-  // for (let index = 0; index < holiday.length; index += 1) {
-  //   if (holiday[index].style.backgroundColor === 'aqua') {
-  //     holiday[index].style.backgroundColor = 'rgb(238,238,238)';
-  //   }
-  // }
 }
 
 button.addEventListener('click', changeBackgroundColor);
 
 // EXERCÍCIO 4
 
-function createButtonFriday(stringHolidays) {
+function createButtonFriday(stringFriday) {
   let button = document.createElement('button');
-  button.innerText = stringHolidays;
+  button.innerText = stringFriday;
   button.id = 'btn-friday';
   divButtons.appendChild(button); //variavel já criada na linha 76
 }
@@ -114,3 +109,13 @@ function createButtonFriday(stringHolidays) {
 createButtonFriday('Sexta-Feira');
 
 // EXERCÍCIO 5
+
+let buttonFriday = document.querySelector('#btn-friday');
+function changeStyle() {
+  let friday = document.querySelectorAll('.friday');
+  for (let index = 0; index < friday.length; index += 1) {
+    friday[index].innerText = 'SEXTA-FEIRA';
+  }
+}
+
+buttonFriday.addEventListener('click', changeStyle);
