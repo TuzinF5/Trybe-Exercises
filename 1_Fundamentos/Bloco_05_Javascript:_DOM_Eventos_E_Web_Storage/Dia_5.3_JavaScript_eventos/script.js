@@ -115,11 +115,18 @@ createButtonFriday('Sexta-Feira');
 // EXERCÍCIO 5
 
 let buttonFriday = document.querySelector('#btn-friday');
+let numero = ['4', '11', '18', '25'];
+let friday = document.querySelectorAll('.friday');
 
+console.log(friday);
+console.log(numero);
 function changeStyle() {
-  let friday = document.querySelectorAll('.friday');
   for (let index = 0; index < friday.length; index += 1) {
-    friday[index].innerText = 'SEXTA-FEIRA';
+    if (friday[index].innerText === numero[index]) {
+      friday[index].innerText = 'SEXTA-FEIRA';
+    } else {
+      friday[index].innerText = numero[index];
+    }
   }
 }
 
