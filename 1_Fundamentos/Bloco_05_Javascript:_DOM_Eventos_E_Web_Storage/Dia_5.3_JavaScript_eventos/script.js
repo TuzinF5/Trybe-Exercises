@@ -131,3 +131,14 @@ function changeStyle() {
 buttonFriday.addEventListener('click', changeStyle);
 
 // EXERCÍCIO 6
+
+// EXERCÍCIO 7
+let divMyTasks = document.querySelector('.my-tasks');
+
+function addTask(tarefa) {
+  let span = document.createElement('span');
+  span.innerText = tarefa;
+  divMyTasks.appendChild(span);
+}
+
+addTask('cozinhar');
