@@ -91,10 +91,10 @@ let button = document.querySelector('#btn-holiday');
 function changeBackgroundColor() {
   let holiday = document.querySelectorAll('.holiday');
   for (let index = 0; index < holiday.length; index += 1) {
-    if (holiday[index].style.color === '') {
-      holiday[index].style.color = 'aqua';
+    if (holiday[index].style.backgroundColor === '') {
+      holiday[index].style.backgroundColor = 'aqua';
     } else {
-      holiday[index].style.color = '';
+      holiday[index].style.backgroundColor = '';
     }
   }
 }
@@ -115,12 +115,10 @@ createButtonFriday('Sexta-Feira');
 // EXERCÍCIO 5
 
 let buttonFriday = document.querySelector('#btn-friday');
-let numero = ['4', '11', '18', '25'];
-let friday = document.querySelectorAll('.friday');
 
-console.log(friday);
-console.log(numero);
 function changeStyle() {
+  let numero = ['4', '11', '18', '25'];
+  let friday = document.querySelectorAll('.friday');
   for (let index = 0; index < friday.length; index += 1) {
     if (friday[index].innerText === numero[index]) {
       friday[index].innerText = 'SEXTA-FEIRA';
