@@ -133,6 +133,7 @@ buttonFriday.addEventListener('click', changeStyle);
 // EXERCÍCIO 6
 
 // EXERCÍCIO 7
+
 let divMyTasks = document.querySelector('.my-tasks');
 
 function addTask(tarefa) {
@@ -142,3 +143,17 @@ function addTask(tarefa) {
 }
 
 addTask('cozinhar');
+
+// EXERCÍCIO 8
+
+function colorDiv(cor) {
+  let div = document.createElement('div');
+  div.className = 'task';
+  div.style.backgroundColor = cor;
+  divMyTasks.appendChild(div); //variavel já criada na linha 137
+}
+
+colorDiv('aqua');
+
+// EXERCÍCIO 9
+
