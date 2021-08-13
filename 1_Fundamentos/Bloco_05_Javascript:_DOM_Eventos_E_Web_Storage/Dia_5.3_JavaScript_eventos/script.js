@@ -132,6 +132,19 @@ buttonFriday.addEventListener('click', changeStyle);
 
 // EXERCÍCIO 6
 
+let fatherOfDays = document.getElementById('days');
+function zoomIn(event) {
+  event.target.style.fontSize = '30px';
+  event.target.style.fontWeight = '600';
+}
+
+function zoomOut(event) {
+  event.target.style.fontSize = '';
+  event.target.style.fontWeight = '';
+}
+fatherOfDays.addEventListener('mouseover', zoomIn);
+fatherOfDays.addEventListener('mouseout', zoomOut);
+
 // EXERCÍCIO 7
 
 let divMyTasks = document.querySelector('.my-tasks');
@@ -156,4 +169,5 @@ function colorDiv(cor) {
 colorDiv('aqua');
 
 // EXERCÍCIO 9
+
 
