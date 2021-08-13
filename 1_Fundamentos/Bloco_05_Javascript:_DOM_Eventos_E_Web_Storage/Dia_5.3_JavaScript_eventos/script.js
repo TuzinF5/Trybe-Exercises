@@ -170,4 +170,19 @@ colorDiv('aqua');
 
 // EXERCÍCIO 9
 
+let colorTask = document.querySelector('.task');
 
+function selectTask() {
+  colorTask.addEventListener('click', function (event) {
+    let colorTaskSelected = document.querySelector('.selected');
+    if (colorTaskSelected === null) {
+      event.target.classList.add('selected');
+    } else {
+      event.target.classList.remove('selected');
+    }
+  });
+}
+
+selectTask(); // By: Denis, Arthur
+
+// EXERCÍCIO 10
