@@ -133,6 +133,7 @@ buttonFriday.addEventListener('click', changeStyle);
 // EXERCÍCIO 6
 
 let fatherOfDays = document.getElementById('days');
+
 function zoomIn(event) {
   event.target.style.fontSize = '30px';
   event.target.style.fontWeight = '600';
@@ -142,6 +143,7 @@ function zoomOut(event) {
   event.target.style.fontSize = '';
   event.target.style.fontWeight = '';
 }
+
 fatherOfDays.addEventListener('mouseover', zoomIn);
 fatherOfDays.addEventListener('mouseout', zoomOut);
 
@@ -186,3 +188,18 @@ function selectTask() {
 selectTask(); // By: Denis, Arthur
 
 // EXERCÍCIO 10
+
+function addColorForDaySelected() {
+  fatherOfDays.addEventListener('click', function (event) {
+    let taskActual = document.querySelector('.selected');
+    let colorTask = taskActual.style.backgroundColor;
+
+    if (event.target.style.backgroundColor === '') {
+      event.target.style.backgroundColor = colorTask;
+    } else {
+      event.target.style.backgroundColor = '';
+    }
+  });
+}
+
+addColorForDaySelected();
