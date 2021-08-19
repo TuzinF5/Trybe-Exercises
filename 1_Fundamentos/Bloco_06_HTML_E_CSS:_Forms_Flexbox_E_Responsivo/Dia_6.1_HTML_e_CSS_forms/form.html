@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>
+        <h1>Formulário</h1>
+      </legend>
+
+      <div>
+        <label for="nome-usuario">Nome do usuario:
+          <input type="text" name="nome" id="nome-usuario" maxlength="40" required placeholder="Digite seu nome">
+        </label>
+      </div>
+
+      <div> <label for="email-usuario">Email do usuario:
+          <input type="text" name="email" id="email-usuario" maxlength="50" required placeholder="Digite seu email">
+        </label>
+      </div>
+
+      <div> <label for="cpf-usuario">CPF do usuario:
+          <input type="text" name="cpf" id="cpf-usuario" maxlength="11" required placeholder="Digite seu cpf">
+        </label>
+      </div>
+
+      <div>
+        <label for="endereco-usuario">Endereço do usuario:
+          <input type="text" name="endereco" id="endereco-usuario" maxlength="200" required
+            placeholder="Digite seu endereço">
+        </label>
+      </div>
+
+      <div>
+        <label for="cidade-usuario">Cidade do usuario:
+          <input type="text" name="cidade" id="cidade-usuario" maxlength="28" required
+            placeholder="Digite o nome da sua cidade">
+        </label>
+      </div>
+
+      <div>
+        <label for="estados">Estado do usuario:
+          <select name="estados" id="estados" required>
+            <option value="selecione">Selecione</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <legend>Moradia:</legend>
+        <div>
+          <label for="casa">
+            <input type="radio" name="moradia" id="casa">Casa
+          </label>
+        </div>
+
+        <div>
+          <label for="apartamento">
+            <input type="radio" name="moradia" id="apartamento">Apartamento
+          </label>
+        </div>
+      </div>
+
+
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <div>
+        <label for="resumo">Resumo do currículo
+          <textarea name="resumo-do-curriculo" id="resumo" maxlength="1000" rows="5" cols="50" required></textarea>
+        </label>
+      </div>
+
+      <div>
+        <label for="cargo">Cargo
+          <input type="text" name="cargo" id="cargo" maxlength="40" required>
+        </label>
+      </div>
+
+      <div>
+        <label for="descricao-do-cargo">Descrição do cargo
+          <input type="text" name="descricao-do-cargo" id="descricao-do-cargo" maxlength="500" required>
+        </label>
+      </div>
+
+      <div>
+        <label for="data-de-inicio">Data de início
+          <input type="text" name="data-de-inicio" id="data-de-inicio" maxlength="10" placeholder="dd/mm/aaaa" required>
+        </label>
+      </div>
+    </fieldset>
+
+    <button type="submit" id="send">Enviar formulário</button>
+    <button type="submit"></button>
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
