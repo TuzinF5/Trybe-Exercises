@@ -47,20 +47,25 @@ function checkDate() {
   bar.push(data.value.substring(5, 6));
 
   if (
-    bar[(0, 1)] === '/' &&
-    day > 0 &&
-    day <= 31 &&
-    month > 0 &&
-    month <= 12 &&
-    year > 0
+    !(
+      bar[(0, 1)] === '/' &&
+      day > 0 &&
+      day <= 31 &&
+      month > 0 &&
+      month <= 12 &&
+      year > 0
+    )
   ) {
+    alert('Data inválida');
+    // Retorna true
     // console.log(bar, typeof bar);
     // console.log(day, typeof day);
     // console.log(month);
     // console.log(year);
-  } else {
-    alert('Data inválida');
   }
+  // else {
+
+  // }
 }
 
 function interrupts(event) {
