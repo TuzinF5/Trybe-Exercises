@@ -1,0 +1,88 @@
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px; /*Exercício 4*/
+  padding: 0;
+  font-size: 18px; /*Exercício 1*/
+}
+h1 {
+  font-size: 1.8em; /*Exercício 2*/
+}
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 40px 0; /*Exercício 3*/
+}
+
+main figure figcaption {
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  /*Exercício 5 e 6*/
+  body {
+    background-color: aquamarine;
+    font-size: 1.3em;
+    margin: 20px;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  main figure {
+    width: 40%;
+    padding: 20px;
+  }
+
+  main figure img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main figure figcaption {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*Exercício 7 e 8*/
+
+  body {
+    background-color: rgb(127, 127, 224);
+    font-size: 1.5em;
+    color: rgb(92, 13, 29);
+    margin: 30px;
+    max-width: 80%;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  main figure {
+    width: 40%;
+    padding: 20px;
+  }
+}
