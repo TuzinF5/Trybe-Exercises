@@ -45,7 +45,9 @@ const customerInfo = (order) => {
   const telephone = Object.values(order);
   const address = Object.values(order.address);
 
-  console.log(`Olá ${firstName[0]}, entrega para: ${secondName[0]}, Telefone: ${telephone[1]}, R. ${address[0]}, N°: ${address[1]}, AP: ${address[2]}`);
+  console.log(
+    `Olá ${firstName[0]}, entrega para: ${secondName[0]}, Telefone: ${telephone[1]}, R. ${address[0]}, N°: ${address[1]}, AP: ${address[2]}`
+  );
 };
 
 customerInfo(order);
@@ -60,7 +62,9 @@ const orderModifier = (order) => {
   const flavors = Object.keys(order.order.pizza);
   const drinks = Object.values(order.order.drinks.coke);
 
-  console.log(`Olá ${client.name}, o total do seu pedido de ${flavors[0]}, ${flavors[1]} e ${drinks[0]} é R$ ${client.payment.total}`);
+  console.log(
+    `Olá ${client.name}, o total do seu pedido de ${flavors[0]}, ${flavors[1]} e ${drinks[0]} é R$ ${client.payment.total}`
+  );
 };
 
 orderModifier(order);
@@ -94,27 +98,64 @@ const addMorningShift = (object, key, value) => {
   newObject[key] = value;
 
   console.log(newObject);
-}
+};
 
 addMorningShift(lesson2, 'turno', 'manhã');
 
 // Exercício 2
 
-const listKeys = object => console.log(Object.keys(lesson2));
+const listKeys = (object) => console.log(Object.keys(object));
 
 listKeys(lesson2);
 
 // Exercício 3
 
-const objectSize = object => console.log(Object.keys(object).length);
+const objectSize = (object) => console.log(Object.keys(object).length);
 
 objectSize(lesson3);
 
 // Exercício 4
 
-const listValues = object => console.log(Object.values(object));
+const listValues = (object) => console.log(Object.values(object));
 
 listValues(lesson3);
 
 // Exercício 5
 
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
+
+console.log(allLessons);
+
+// Exercício 6
+
+const sumStudents1 = Object.values(allLessons.lesson1);
+const sumStudents2 = Object.values(allLessons.lesson2);
+const sumStudents3 = Object.values(allLessons.lesson3);
+console.log(sumStudents1[1] + sumStudents2[1] + sumStudents3[1]);
+
+// Exercício 7
+
+const position = (object, position) => {
+  const art = Object.values(object);
+  return art[position];
+};
+
+console.log(position(lesson1, 0));
+
+// Exercício 8
+
+function keyValue(object, key, value) {
+  const chaves = Object.entries(object);
+  let result = '';
+
+  for (let index = 0; index < chaves.length; index += 1) {
+    if (chaves[index][0] === key && chaves[index][1] === value) {
+      result = true;
+      break;
+    } else {
+      result = false;
+    }
+  }
+  return result;
+}
+console.log(keyValue(lesson3, 'turno', 'noite'));
