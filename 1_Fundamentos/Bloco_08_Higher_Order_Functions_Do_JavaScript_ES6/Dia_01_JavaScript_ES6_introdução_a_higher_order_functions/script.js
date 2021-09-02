@@ -33,8 +33,33 @@ const checkDrawnNumber = (betNumber, callback) => {
   const betNum = betNumber;
   const randomNumber = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
   console.log(randomNumber);
-  return callback(betNum, randomNumber)
+  return callback(betNum, randomNumber);
 };
 console.log(checkDrawnNumber(4, checkNumber));
 
 // EXERCÍCIO 3
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checkAnswers = (array1, array2) => {
+  let result = 0;
+  for (let index = 0; index < array1.length; index += 1) {
+    if (array2[index] === 'N.A') {
+      result = result;
+    } else if (array1[index] === array2[index]) {
+      result += 1;
+    } else {
+      result -= 0.5;
+    }
+  }
+  return result;
+};
+
+const answerCount = (correctArray, studentArray, callback) => {
+  const array1 = correctArray;
+  const array2 = studentArray;
+  return callback(array1, array2);
+};
+
+console.log(answerCount(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswers));
