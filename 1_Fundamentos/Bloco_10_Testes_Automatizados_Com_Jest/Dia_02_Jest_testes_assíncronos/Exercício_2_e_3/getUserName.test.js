@@ -24,7 +24,7 @@ describe('Usando ASYNC/AWAIT', () => {
     it('com id que não seja de um usuário, retorna a mensagem indicando que o id nao foi encontrado', async () => {
       expect.assertions(1);
       try {
-        await getUserName(4);
+        await getUserName(5);
       } catch (error) {
         expect(error).toEqual(new Error('User with 4 not found.'));
       }

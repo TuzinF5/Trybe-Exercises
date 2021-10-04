@@ -2,11 +2,12 @@ const uppercase = require('./uppercase');
 
 describe('Chamada a função uppercase', () => {
   it('transforma as letras de uma palavra em letras maiúsculas', (done) => {
-    uppercase('arthur e foda', (result) => {
+    uppercase('arthur é foda', (result) => {
       try {
-        expect(result).toBe('ARTHUR E FODA');
+        expect(result).toBe('ARTHUR É FODA');
         done();
-      } catch (error) {
+      }
+      catch (error) {
         done(error);
       }
     });
