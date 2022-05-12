@@ -5,25 +5,45 @@ Vamos juntar tudo o que aprendemos até aqui e exercitar mais ainda nosso aprend
 2. 🚀 Uma vez que encontrar a imagem oficial, acesse-a (clicando em seu card) e verifique na página de detalhes. Confira se existe algum comando para baixar a imagem localmente sem ter que criar um contêiner para isso.
 
 3. 🚀 Baixe a imagem utilizando a tag: stable-slim, que é uma versão reduzida da distribuição.
+Resposta: "docker pull debian:stable-slim"
 
 4. 🚀 Após baixar a imagem para seu computador local, crie e execute um contêiner no modo interativo utilizando essa imagem como referência — não esqueça referenciar a tag.
+Resposta: "docker container run -it debian:stable-slim"
 
 5. 🚀 No terminal, você deve conseguir rodar o comando cat /etc/*-release, que vai retornar os dados da distribuição Debian que está sendo rodada dentro do contêiner.
+Resposta:
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
 
 6. 🚀 Encerre o terminal.
+Resposta: "exit"
 
 7. 🚀 Verifique na sua lista de contêiners qual contêiner se refere ao exercício que acabou de praticar.
+Resposta: "docker container ls -a", nome do container: admiring_proskuriakova
 
 8. 🚀 Inicie o mesmo contêiner novamente, sem criar outro. Valide se ele está ativo na lista de contêiners.
+Resposta: "docker container start admiring_proskuriakova", "docker container ls -a"
 
 9. 🚀 Retome o contêiner que foi criado anteriormente neste exercício.
+Resposta: "docker container attach admiring_proskuriakova"
 
 10. 🚀 Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do contêiner.
+Resposta: "11.3"
 
 11. 🚀 Encerre o terminal.
+Resposta: "exit"
 
 12. 🚀 Remova somente o contêiner criado para esse exercício.
+Resposta: "docker container rm admiring_proskuriakova"
 
 13. [BÔNUS] Crie e rode de modo interativo em modo 'Cleanup', a imagem andrius/ascii-patrol.
+Resposta: "docker container run -it --rm andrius/ascii-patrol"
 
 14. [BÔNUS] **Encerre o contêiner utilizando os botões [ctrl] + [c].
