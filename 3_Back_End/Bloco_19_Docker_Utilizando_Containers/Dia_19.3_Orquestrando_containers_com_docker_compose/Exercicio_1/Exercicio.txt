@@ -9,21 +9,38 @@ Vamos aprimorar nossos conhecimentos sobre "images" e "volumes", para isso:
   - Salve o arquivo em qualquer lugar da sua máquina com a extensão html
 
 2. Crie um container para manter um servidor httpd:2.4 Apache e vincule sua porta interna com a porta 4545 da sua máquina local.
+Resposta: "docker container run --name exercicio-1 -p 4545:80 -v "/home/arthur/Documentos/Trybe/Trybe-Exercises/3_Back_End/Bloco_19_Docker_Utilizando_Containers/Dia_19.3_Orquestrando_containers_com_docker_compose/Exercicio_1/:/usr/local/apache2/htdocs/" httpd:2.4"
 
 3. Após criar o container acesse a página HTML que está rodando no servidor em seu browser.
+Resposta: "http://localhost:4545/missao_trybe.html"
 
 4. Acesse o arquivo missao_trybe.html e acrescente a tag <p> com o seguinte texto "Nosso negócio é GENTE! #VQV";
 
 5. Obtenha o id do container httpd:2.4;
+Resposta: "docker container ls -a", "cf8d12cbea95"
 
 6. Obtenha o Mounts através da propriedade Source que deve mostrar o volume desse container no Docker Host;
+Resposta: "docker inspect cf8d12cbea95", ""Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/arthur/Documentos/Trybe/Trybe-Exercises/3_Back_End/Bloco_19_Docker_Utilizando_Containers/Dia_19.3_Orquestrando_containers_com_docker_compose/Exercicio_1",
+                "Destination": "/usr/local/apache2/htdocs",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],"
 
 7. Agora pare o container httpd:2.4;
+Resposta: "docker container stop cf8d12cbea95"
 
 8. Exclua o seu container;
+Resposta: "docker container rm cf8d12cbea95"
 
 9. Verifique se a pasta onde você salvo o arquivo html permanece no mesmo lugar;
 
 10. Obtenha o IMAGE ID do servidor;
+Resposta: "docker images", "c58ef9bfbb57"
 
 11. Depois de obter o IMAGE ID, exclua a imagem.
+Resposta: "docker image rm c58ef9bfbb57"
