@@ -50,14 +50,19 @@ INSERT INTO Provides(Piece, Provider, Price)
   - Esse banco de dados é de uso livre, sendo licenciado de acordo com os termos deste link: https://creativecommons.org/licenses/by-sa/3.0/.
 
 1. Escreva uma query para exibir a peça e o preço de tudo que é provido pela empresa RBT.
+Resposta: SELECT Piece, Price FROM PiecesProviders.Provides WHERE Provider = 'RBT';
 
 2. Escreve uma query para exibir todas as informações das cinco peças com os maiores preços.
+Resposta: SELECT * FROM PiecesProviders.Provides ORDER BY Price DESC LIMIT 5;
 
 3. Escreva uma query para exibir o nome das empresas e preço das peças com os quatro maiores preços, começando a lista a partir do 3º item.
+Resposta: SELECT Provider, Price FROM PiecesProviders.Provides ORDER BY Price DESC LIMIT 4 OFFSET 2;
 
 4. Escreva uma query para exibir todas as informações das peças que são providas pela empresa HAL. Ordene o resultado pelos preços das peças de forma decrescente.
+Resposta: SELECT * FROM PiecesProviders.Provides WHERE Provider = 'HAL' ORDER BY Price DESC;
 
 5. Escreva uma query para exibir por quantas empresas a peça 1 é provida.
+Resposta: SELECT COUNT(*) AS Empresas FROM PiecesProviders.Provides WHERE Piece = 1;
 
 Exercício 7: Usando WHERE, faça os exercícios deste link: https://www.w3schools.com/sql/exercise.asp?filename=exercise_where1.
 
