@@ -9,16 +9,11 @@ const tabelaIMC = [
   { IMC: '40,0 e acima', Situação: 'Obesidade graus III e IV' },
 ];
 
-const peso = readline.questionFloat('Qual seu peso? ');
-const altura = readline.question('Qual sua altura em centímetros? ');
-
 const calculaIMC = (peso, altura) => {
   const alturaEmMetro = altura / 100;
   const resultadoExponencial = Math.pow(alturaEmMetro, 2);
   return (peso / resultadoExponencial).toFixed(2);
 };
-
-const resultadoIMC = calculaIMC(peso, altura);
 
 const categoriaIMC = (IMC) => {
   if (IMC < 18.5) {
@@ -41,5 +36,13 @@ const categoriaIMC = (IMC) => {
   }
 };
 
-console.log('\n', `Seu IMC é: ${resultadoIMC}!`);
-console.log(categoriaIMC(resultadoIMC));
+const main = () => {
+  const peso = readline.questionFloat('Qual seu peso? ');
+  const altura = readline.question('Qual sua altura em centímetros? ');
+  const resultadoIMC = calculaIMC(peso, altura);
+
+  console.log('\n', `Seu IMC é: ${resultadoIMC}!`);
+  console.log(categoriaIMC(resultadoIMC));
+};
+
+module.exports = main;
