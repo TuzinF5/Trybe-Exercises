@@ -6,7 +6,7 @@ const sorteio = (numUsu, resultado) => {
   if (numUsu === resultado) {
     console.log('Parabéns, número correto!', '\n');
   } else {
-    console.log(`Opa, não foi dessa vez. O número era ${resultado}`, '\n');
+    console.log(`Opa, não foi dessa vez. O número era ${resultado}!`, '\n');
   }
 };
 
@@ -24,4 +24,4 @@ const main = () => {
   }
 };
 
-main();
+module.exports = main;
