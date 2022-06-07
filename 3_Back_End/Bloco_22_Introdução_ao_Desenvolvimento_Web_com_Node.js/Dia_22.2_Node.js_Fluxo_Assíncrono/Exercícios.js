@@ -17,3 +17,13 @@ const somaMultiplica = (a, b, c) => {
     resolve(resultado);
   });
 };
+
+const numeroAleatorio = () => Math.floor(Math.random() * 100 + 1);
+
+const num1 = numeroAleatorio();
+const num2 = numeroAleatorio();
+const num3 = numeroAleatorio();
+
+somaMultiplica(num1, num2, num3)
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
