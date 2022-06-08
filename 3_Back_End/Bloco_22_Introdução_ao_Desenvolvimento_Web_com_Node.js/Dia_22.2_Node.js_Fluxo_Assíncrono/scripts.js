@@ -38,10 +38,30 @@ const substituiPalavraArquivo = async () => {
 
     await fs.writeFile(caminhoDestino, novoconteudo);
 
-      console.log('Arquivo salvo!');
+    console.log('Arquivo salvo!');
   } catch (error) {
     console.error(error.message);
   }
 };
 // substituiPalavraArquivo();
 ////
+
+// Exercício 8
+const FizzBuzz = (number) => {
+  return new Promise((resolve, reject) => {
+    if (number % 15 === 0) return resolve('FizzBuzz');
+    if (number % 3 === 0) return resolve('Fizz');
+    if (number % 5 === 0) return resolve('Buzz');
+    return reject(number);
+  });
+};
+
+const main = async () => {
+  try {
+    const resultado = await FizzBuzz(2);
+    console.log(resultado);
+  } catch (error) {
+    console.log(error);
+  }
+};
+// main();
