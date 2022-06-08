@@ -44,4 +44,18 @@ describe('Verifica o retorno da função', () => {
       expect(resultado).to.be.equals('neutro');
     });
   });
+
+  describe('quando passar um valor que não seja numérico', () => {
+    it('o retorno é do tipo "string"', () => {
+      const resultado = verificaNumero('4');
+
+      expect(resultado).to.be.a('string');
+    });
+
+    it('deverá retornar "o valor deve ser um número"', () => {
+      const resultado = verificaNumero('4');
+
+      expect(resultado).to.be.equals('o valor deve ser um número')
+    })
+  })
 });
