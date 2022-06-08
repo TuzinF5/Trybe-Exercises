@@ -9,7 +9,7 @@ const CONTEUDO_DO_ARQUIVO = 'Aprendendo testes na trybe';
 
 describe('Verifica se a função', () => {
   before(() => {
-    sinon.stub(fs, 'writeFileSync').returns('ok');
+    sinon.stub(fs, 'writeFileSync');
   });
 
   after(() => {
