@@ -6,17 +6,39 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/ping', (_req, res) => {
+const verificaToken = (token) => {
+  if (token.length > 16 || token.length < 16) return false;
+  return true;
+};
+
+app.get('/ping', (req, res) => {
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
+
   return res.status(200).json({ message: 'pong' });
 });
 
 app.post('/hello', (req, res) => {
   const { name } = req.body;
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
+
   return res.status(201).json({ message: `Hello, ${name}!` });
 });
 
 app.post('/greetings', (req, res) => {
   const { name, age } = req.body;
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
 
   if (age > 17) return res.status(200).json({ message: `Hello, ${name}!` });
 
@@ -25,6 +47,11 @@ app.post('/greetings', (req, res) => {
 
 app.put('/users/:name/:age', (req, res) => {
   const { name, age } = req.params;
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
 
   return res
     .status(200)
@@ -38,7 +65,13 @@ const leArquivoSimpsons = async () => {
   return JSON.parse(simpsons);
 };
 
-app.get('/simpsons', async (_req, res) => {
+app.get('/simpsons', async (req, res) => {
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
+
   try {
     const simpsons = await leArquivoSimpsons();
     return res.status(200).json(simpsons);
@@ -50,6 +83,12 @@ app.get('/simpsons', async (_req, res) => {
 
 app.get('/simpsons/:id', async (req, res) => {
   const { id } = req.params;
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
+
   try {
     const simpsons = await leArquivoSimpsons();
     const simpson = simpsons.find((simpson) => simpson.id === id);
@@ -64,6 +103,12 @@ app.get('/simpsons/:id', async (req, res) => {
 
 app.post('/simpsons', async (req, res) => {
   const { id, name } = req.body;
+  const { authorization } = req.headers;
+  const respostaToken = verificaToken(authorization);
+
+  if (!respostaToken)
+    return res.status(401).json({ message: 'Token inválido!' });
+
   try {
     const simpsons = await leArquivoSimpsons();
     const simpson = simpsons.find((simpson) => simpson.id === id);
