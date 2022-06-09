@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs/promises');
 
 const app = express();
 
@@ -28,6 +29,23 @@ app.put('/users/:name/:age', (req, res) => {
   return res
     .status(200)
     .json({ message: `Seu nome é ${name} e você tem ${age} anos de idade` });
+});
+
+////
+
+const leArquivoSimpsons = async () => {
+  const simpsons = await fs.readFile('./simpsons.json', 'utf-8');
+  return JSON.parse(simpsons);
+};
+
+app.get('/simpsons', async (_req, res) => {
+  try {
+    const simpsons = await leArquivoSimpsons();
+    return res.status(200).json(simpsons);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).end();
+  }
 });
 
 app.listen('3000', () => console.log('App rodando na porta 3000!'));
