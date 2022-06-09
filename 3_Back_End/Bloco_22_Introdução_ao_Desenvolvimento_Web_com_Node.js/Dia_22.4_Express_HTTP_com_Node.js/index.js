@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs/promises');
+const crypto = require('crypto');
 
 const app = express();
 
@@ -123,6 +124,21 @@ app.post('/simpsons', async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+////
+
+const gerarToken = () => crypto.randomBytes(8).toString('hex');
+
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+
+  if (!email || !password || !firstName || !phone)
+    return res.status(401).json({ message: 'missing fields' });
+
+  const token = gerarToken();
+
+  return res.status(200).json({ token });
 });
 
 app.listen('3000', () => console.log('App rodando na porta 3000!'));
