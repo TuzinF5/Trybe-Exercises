@@ -62,4 +62,22 @@ app.get('/simpsons/:id', async (req, res) => {
   }
 });
 
+app.post('/simpsons', async (req, res) => {
+  const { id, name } = req.body;
+  try {
+    const simpsons = await leArquivoSimpsons();
+    const simpson = simpsons.find((simpson) => simpson.id === id);
+
+    if (simpson) {
+      return res.status(409).json({ message: 'id already exists' });
+    }
+
+    simpsons.push({ id, name });
+    await fs.writeFile('./simpsons.json', JSON.stringify(simpsons));
+    return res.status(204).end();
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 app.listen('3000', () => console.log('App rodando na porta 3000!'));
