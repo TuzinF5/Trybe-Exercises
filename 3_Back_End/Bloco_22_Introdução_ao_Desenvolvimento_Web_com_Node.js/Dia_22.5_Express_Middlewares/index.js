@@ -6,6 +6,7 @@ const verifyInfos = require('./middlewares/verifyInfos');
 const verifySaleDate = require('./middlewares/verifySaleDate');
 const verifyWarrantyPeriod = require('./middlewares/verifyWarrantyPeriod');
 const verifyFields = require('./middlewares/verifyFields');
+const verifyToken = require('./middlewares/verifyToken');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.post(
   verifyInfos,
   verifySaleDate,
   verifyWarrantyPeriod,
+  verifyToken,
   (_req, res) => {
     return res.status(201).json({ message: 'Venda cadastrada com sucesso' });
   }
