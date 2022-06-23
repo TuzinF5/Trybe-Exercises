@@ -10,6 +10,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.get('/user', async (_req, res) => {
+  const users = await User.getAll();
+  return res.status(200).json(users);
+});
+
 app.post('/user', validateUser, async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
