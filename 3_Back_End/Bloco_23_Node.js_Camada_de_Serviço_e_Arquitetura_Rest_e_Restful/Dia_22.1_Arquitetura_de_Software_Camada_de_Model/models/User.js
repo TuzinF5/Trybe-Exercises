@@ -23,4 +23,15 @@ const getAll = async () => {
   return users;
 };
 
-module.exports = { create, getAll };
+const findById = async (id) => {
+  const query =
+    'SELECT id, first_name, last_name, email FROM users_crud.users WHERE id = ?;';
+
+  const [user] = await connection.execute(query, [id]);
+
+  if (user.length === 0) return null;
+
+  return user;
+};
+
+module.exports = { create, getAll, findById };
