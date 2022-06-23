@@ -37,6 +37,27 @@ app.post('/user', validateUser, async (req, res) => {
   return res.status(201).json({ id: userId, firstName, lastName, email });
 });
 
+app.put('/user/:id', validateUser, async (req, res) => {
+  const { id } = req.params;
+  const { firstName, lastName, email, password } = req.body;
+
+  const userUpdate = await User.update({
+    firstName,
+    lastName,
+    email,
+    password,
+    id: Number(id),
+  });
+
+  if (!userUpdate)
+    return res.status(404).json({
+      error: true,
+      message: 'Usuário não encontrado',
+    });
+
+  return res.status(200).json({ id: Number(id), firstName, lastName, email });
+});
+
 app.use(middlewareError);
 
 const { PORT } = process.env;
