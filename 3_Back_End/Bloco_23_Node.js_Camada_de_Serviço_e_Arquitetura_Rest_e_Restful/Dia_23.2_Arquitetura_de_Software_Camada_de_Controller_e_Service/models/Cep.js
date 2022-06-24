@@ -2,7 +2,7 @@ const connection = require('./connection');
 
 const getCep = async (cep) => {
   const query =
-    'SELECT cep, logradouro, bairro, localidade, uf FROM cep_lookup.ceps WHERE cep = ?;';
+    'SELECT cep, logradouro, bairro, localidade, uf FROM ceps WHERE cep = ?;';
 
   const [result] = await connection.execute(query, [cep]);
 
@@ -15,7 +15,7 @@ const getCep = async (cep) => {
 
 const create = async ({ cep, logradouro, bairro, localidade, uf }) => {
   const query =
-    'INSERT cep_lookup.ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?);';
+    'INSERT ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?);';
 
   await connection.execute(query, [cep, logradouro, bairro, localidade, uf]);
 };
