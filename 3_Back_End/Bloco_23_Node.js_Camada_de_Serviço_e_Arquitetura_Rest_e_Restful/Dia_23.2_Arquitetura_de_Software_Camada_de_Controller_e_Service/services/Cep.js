@@ -1,15 +1,27 @@
 const Cep = require('../models/Cep');
+const CepAPI = require('../models/CepAPI');
 
-const getCep = async (cep) => {
-  const cepClean = cep.replace('-', '');
+const getCep = async (cepApi) => {
+  const cepClean = cepApi.replace('-', '');
 
   const result = await Cep.getCep(cepClean);
 
   if (!result) {
-    return {
-      status: 404,
-      error: { code: 'notFound', message: 'CEP não encontrado' },
-    };
+    const {
+      data,
+      data: { cep, logradouro, bairro, localidade, uf },
+    } = await CepAPI.getCep(cepClean);
+
+    if (data.erro) {
+      return {
+        status: 404,
+        error: { code: 'notFound', message: 'CEP não encontrado' },
+      };
+    }
+
+    await Cep.create({ cep: cepClean, logradouro, bairro, localidade, uf });
+
+    return { cep, logradouro, bairro, localidade, uf };
   }
 
   const commomCep = `${result.cep.substr(0, 5)}-${result.cep.substr(5)}`;
