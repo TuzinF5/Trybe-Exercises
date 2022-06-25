@@ -1,3 +1,4 @@
+const Bairro = require('../models/Bairro');
 const Cep = require('../models/Cep');
 const CepAPI = require('../models/CepAPI');
 
@@ -19,7 +20,17 @@ const getCep = async (cepApi) => {
       };
     }
 
-    await Cep.create({ cep: cepClean, logradouro, bairro, localidade, uf });
+    const id = await Bairro.findByBairro(bairro);
+
+    if (!id) {
+      const idBairroCreated = await Bairro.create({ bairro, localidade, uf });
+
+      await Cep.create({
+        cep: cepClean,
+        logradouro,
+        bairro_id: idBairroCreated,
+      });
+    }
 
     return { cep, logradouro, bairro, localidade, uf };
   }

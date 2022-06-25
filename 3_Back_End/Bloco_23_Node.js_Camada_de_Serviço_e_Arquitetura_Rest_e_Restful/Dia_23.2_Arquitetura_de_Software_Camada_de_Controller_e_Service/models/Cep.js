@@ -2,7 +2,7 @@ const connection = require('./connection');
 
 const getCep = async (cep) => {
   const query =
-    'SELECT cep, logradouro, bairro, localidade, uf FROM ceps WHERE cep = ?;';
+    'SELECT C.cep, C.logradouro, B.bairro, B.localidade, B.uf FROM ceps AS C INNER JOIN bairros AS B ON C.bairro_id = B.id;';
 
   const [result] = await connection.execute(query, [cep]);
 
@@ -13,11 +13,10 @@ const getCep = async (cep) => {
   return cepFound;
 };
 
-const create = async ({ cep, logradouro, bairro, localidade, uf }) => {
-  const query =
-    'INSERT ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?);';
+const create = async ({ cep, logradouro, bairro_id }) => {
+  const query = 'INSERT INTO ceps (cep, logradouro, bairro_id) VALUES (?, ?, ?);';
 
-  await connection.execute(query, [cep, logradouro, bairro, localidade, uf]);
+  await connection.execute(query, [cep, logradouro, bairro_id]);
 };
 
 module.exports = { getCep, create };
