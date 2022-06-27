@@ -1,0 +1,28 @@
+Agora é sua vez!
+
+Execute esse script para subir o banco do exercício:
+
+  DROP DATABASE IF EXISTS rest_exercicios;
+  CREATE DATABASE IF NOT EXISTS rest_exercicios;
+  USE rest_exercicios;
+
+  CREATE TABLE IF NOT EXISTS products (
+      id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+      name VARCHAR(100) NOT NULL,
+      brand VARCHAR(100) NOT NULL
+  );
+
+  INSERT INTO products (name, brand)
+  VALUES ('Cerveja Skol', 'Ambev'),
+        ('Monitor AGON', 'AOC'),
+        ('MacBook Air', 'Apple');
+  SELECT * FROM products;
+
+Exercício 1: Pense em qual é o recurso que estamos trabalhando e altere os endpoints para que fiquem padronizados.
+
+Exercício 2: Padronize todos os retornos para JSON.
+
+Exercício 3: Utilize os verbos (POST, PUT, GET etc.) corretos para cada ação do CRUD.
+
+Exercício 4: Garanta que todos os endpoints tenham as respostas (status code) coerentes, ou seja, código para requisições bem sucedidas, validações, tratamento de erros, etc.
+Dica: Para testar suas requisições você pode utilizar o Postman.
