@@ -19,7 +19,7 @@ describe('Busca um filme pelo "ID"', () => {
     const response = {};
 
     before(() => {
-      request.params = {};
+      request.params = { id: 1};
 
       response.status = sinon.stub().returns(response);
       response.json = sinon.stub().returns();
@@ -49,7 +49,7 @@ describe('Busca um filme pelo "ID"', () => {
     const response = {};
 
     before(() => {
-      request.params = {};
+      request.params = { id: 2};
 
       response.status = sinon.stub().returns(response);
       response.json = sinon.stub().returns();
