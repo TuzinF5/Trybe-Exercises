@@ -18,4 +18,13 @@ const getById = async (id) => {
   }
 };
 
-module.exports = { getAll, getById };
+const create = async ({ title, author, pageQuantity }) => {
+  try {
+    const book = await Book.create({ title, author, pageQuantity });
+    return book;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
+module.exports = { getAll, getById, create };
