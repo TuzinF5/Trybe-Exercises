@@ -4,7 +4,11 @@ const Surgeries = (sequelize, DataTypes) => {
   const Surgeries = sequelize.define(
     'Surgeries',
     {
-      surgery_id: { type: DataTypes.INTEGER, primaryKey: true },
+      surgery_id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
       specialty: DataTypes.STRING,
       doctor: DataTypes.STRING,
     },

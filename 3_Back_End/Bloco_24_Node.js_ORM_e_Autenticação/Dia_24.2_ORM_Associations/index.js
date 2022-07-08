@@ -73,6 +73,18 @@ app.get('/patients-plans/:id', async (req, res) => {
   }
 });
 
+app.post('/patients', async (req, res) => {
+  try {
+    const { fullname, plan_id } = req.body;
+
+    const patients = await Patients.create({ fullname, plan_id });
+
+    return res.status(200).json(patients);
+  } catch (error) {
+    return res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Port: ${PORT}`);
 });
