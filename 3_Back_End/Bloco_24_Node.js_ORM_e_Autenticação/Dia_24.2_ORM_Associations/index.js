@@ -107,6 +107,30 @@ app.get('/patients-surgeries-no-doctor', async (_req, res) => {
   }
 });
 
+app.get('/surgeries/:name', async (req, res) => {
+  try {
+    const { name } = req.params;
+
+    const surgeries = await Surgeries.findAll({
+      where: { doctor: name },
+      attributes: { exclude: ['surgery_id'] },
+      include: {
+        model: Patients,
+        as: 'patients',
+        through: { attributes: [] },
+      },
+    });
+
+    if (!surgeries.length) {
+      return res.status(404).json({ message: 'No doctor found' });
+    }
+
+    return res.status(200).json(surgeries);
+  } catch (error) {
+    return res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Port: ${PORT}`);
 });
