@@ -85,6 +85,28 @@ app.post('/patients', async (req, res) => {
   }
 });
 
+app.get('/patients-surgeries-no-doctor', async (_req, res) => {
+  try {
+    const patients = await Patients.findAll({
+      order: [['patient_id', 'ASC']],
+      include: {
+        model: Surgeries,
+        as: 'surgeries',
+        through: { attributes: [] },
+        attributes: { exclude: ['doctor'] },
+      },
+    });
+
+    if (!patients.length) {
+      return res.status(404).json({ message: 'No patients found' });
+    }
+
+    return res.status(200).json(patients);
+  } catch (error) {
+    return res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Port: ${PORT}`);
 });
