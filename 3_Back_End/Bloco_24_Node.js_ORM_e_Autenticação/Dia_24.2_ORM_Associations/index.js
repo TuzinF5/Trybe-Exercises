@@ -50,6 +50,29 @@ app.get('/patients-surgeries', async (_req, res) => {
   }
 });
 
+app.get('/patients-plans/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const patients = await Plans.findAll({
+      where: { plan_id: id },
+      include: {
+        model: Patients,
+        as: 'patients',
+        attributes: { exclude: ['plan_id'] },
+      },
+    });
+
+    if (!patients.length) {
+      return res.status(404).json({ message: 'No plan found' });
+    }
+
+    return res.status(200).json(patients);
+  } catch (error) {
+    return res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Port: ${PORT}`);
 });
