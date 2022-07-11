@@ -25,6 +25,8 @@ app.get('/ping', controllers.ping);
 
 app.post('/login', middlewares.validateLoginBody, controllers.login);
 
+app.get('/users/me', middlewares.auth, controllers.users);
+
 app.use(middlewares.error);
 
 app.listen(PORT, () => {
