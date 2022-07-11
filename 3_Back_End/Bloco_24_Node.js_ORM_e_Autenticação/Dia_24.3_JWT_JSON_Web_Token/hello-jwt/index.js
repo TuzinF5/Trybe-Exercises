@@ -29,6 +29,8 @@ app.get('/users/me', middlewares.auth, controllers.users);
 
 app.get('/top-secret', middlewares.auth, middlewares.admin, controllers.topSecret);
 
+app.post('/signup', controllers.signup);
+
 app.use(middlewares.error);
 
 app.listen(PORT, () => {
