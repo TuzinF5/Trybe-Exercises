@@ -47,6 +47,26 @@ class PessoaEstudante {
       this._notasTrabalho = notas;
     }
   }
+
+  public somaNotasProva(): number {
+    const result = this._notasProva?.reduce((prev, current) => prev + current, 0);
+    return result as number;
+  }
+
+  public mediaNotasProva(): number {
+    const result = (this._notasProva?.reduce((prev, current) => prev + current, 0) / this._notasProva.length);
+    return result as number;
+  }
+
+  public somaNotasTrabalho(): number {
+    const result = this._notasTrabalho?.reduce((prev, current) => prev + current, 0);
+    return result as number;
+  }
+
+  public mediaNotasTrabalho(): number {
+    const result = (this._notasTrabalho?.reduce((prev, current) => prev + current, 0) / this._notasTrabalho.length);
+    return result as number;
+  }
 }
 
 const estudante = new PessoaEstudante('Arthur', 'Trybe', [2, 4, 6, 8], [3, 5]);
