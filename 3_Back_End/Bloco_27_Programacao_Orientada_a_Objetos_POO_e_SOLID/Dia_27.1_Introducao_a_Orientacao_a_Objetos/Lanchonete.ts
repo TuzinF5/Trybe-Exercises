@@ -33,6 +33,8 @@ class Pedido {
   private _itensConsumidos: ItemPedido[] = [];
   private _pagamento: string;
   private _desconto: number = 0;
+  private _totalPagar: number = 0;
+  private _totalPagarComDesconto: number = 0;
 
   constructor(
     cliente: PessoaCliente,
@@ -58,10 +60,24 @@ class Pedido {
   get desconto(): number {
     return this._desconto;
   }
+
+  totalPedido(): number {
+    return this._totalPagar = this._itensConsumidos.reduce((prev, curr) => prev + curr.preco, 0);
+  }
+
+  totalValorDesconto(): number {
+    return this._totalPagarComDesconto =
+    this._totalPagar - Number(((this._totalPagar / 100) * this._desconto).toFixed(2));
+  }
 }
 
 const cliente = new PessoaCliente('Arthur');
-const item = new ItemPedido('Batata Frita', 2);
-const pedido = new Pedido(cliente, [item], 'Cartão', 0);
+const item1 = new ItemPedido('Batata Frita', 2);
+const item2 = new ItemPedido('Refrigerante', 22);
+const pedido = new Pedido(cliente, [item1, item2], 'Cartão', 22);
 
 console.log(pedido);
+console.log('\n', pedido.totalPedido());
+console.log('\n', pedido);
+console.log('\n', pedido.totalValorDesconto());
+console.log('\n', pedido);
