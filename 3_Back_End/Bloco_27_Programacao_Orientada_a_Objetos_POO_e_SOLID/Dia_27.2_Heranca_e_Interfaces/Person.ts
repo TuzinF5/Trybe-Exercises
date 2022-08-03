@@ -40,6 +40,8 @@ class Person {
   }
 }
 
+export default Person;
+
 const person1 = new Person('jon', new Date('1980/01/25'));
 const person2 = new Person('doe', new Date('1902/07/02'));
 console.log(person1);
