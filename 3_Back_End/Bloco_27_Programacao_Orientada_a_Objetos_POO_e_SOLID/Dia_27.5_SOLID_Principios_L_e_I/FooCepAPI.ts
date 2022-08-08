@@ -1,5 +1,11 @@
 // ./FooCepAPI.ts
-class FooCepAPI {
+
+export default interface IFooCepApi {
+  getAddressByCEP(cep: string, number: number): Promise<string>;
+  getCepByAddress(cep: string, number: number): Promise<string>;
+}
+
+class FooCepAPI implements IFooCepApi {
   async getAddressByCEP(cep: string, number: number): Promise<string> {
     return `O endereço para o "CEP:${cep}, n°:${number}" é "endereço foo"`;
   }
@@ -9,4 +15,4 @@ class FooCepAPI {
   }
 }
 
-export default FooCepAPI;
+export { FooCepAPI };
