@@ -3,23 +3,24 @@ Agora, a prática!
 Utilizando a coleção bios: https://www.mongodb.com/docs/manual/reference/bios-example-collection/, construa queries para retornar os seguintes itens:
 
 Exercício 1: Retorne o documento com o _id igual a 8.
-Resposta:
+Resposta: db.bios.findOne({ _id: 8 });
 
 Exercício 2: Retorne o documento com o _id igual a 8, mas só exiba os atributos: _id e name.
-Resposta:
+Resposta: db.bios.findOne({ _id: 8 }, { _id: true, name: true });
 
 🚀 Exercício 3: Retorne apenas os atributos name e birth do documento com o _id igual a 8.
-Resposta:
+Resposta: db.bios.findOne({ _id: 8 }, { _id: false, name: true, birth: true });
 
 Exercício 4: Retorne todos os documentos em que o atributo name.first seja igual a John, utilizando o método pretty().
-Resposta:
+Resposta: db.bios.find({ 'name.first': 'John' }).pretty();
 
 Exercício 5: Retorne os 3 primeiros documentos da coleção bios utilizando o método pretty().
-Resposta:
+Resposta: db.bios.find().limit(3).pretty();
 
 Exercício 6: Retorne 2 documentos da coleção bios pulando os 5 primeiros documentos.
+Resposta: db.bios.find().limit(2).skip(5).pretty();
+
 Utilizando o mongoimport, importe o arquivo books.json para a sua instância local do MongoDB e utilize a coleção books para construir as seguintes consultas:
-Resposta:
 
 🚀 Exercício 7: Retorne a quantidade de documentos da coleção books.
 Resposta:
