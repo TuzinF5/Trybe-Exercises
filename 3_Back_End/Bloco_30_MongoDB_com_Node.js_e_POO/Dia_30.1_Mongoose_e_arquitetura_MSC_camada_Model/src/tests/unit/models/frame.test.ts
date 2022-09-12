@@ -17,6 +17,7 @@ describe('Frame Model', () => {
     sinon.stub(Model, 'create').resolves(frameMockWithId);
     sinon.stub(Model, 'findOne').resolves(frameMockWithId);
     sinon.stub(Model, 'find').resolves(arrayFrameMockWithId);
+    sinon.stub(Model, 'findByIdAndDelete').resolves(frameMockWithId);
   });
 
   after(() => {
@@ -50,6 +51,22 @@ describe('Frame Model', () => {
       const result = await frameModel.read();
 
       expect(result).to.be.deep.equal(arrayFrameMockWithId);
+    });
+  });
+
+  describe('Deleta um frame pelo id', () => {
+    it('Deleta com sucesso com id valido', async () => {
+      const result = await frameModel.destroy('62cf1fc6498565d94eba52cd');
+
+      expect(result).to.be.deep.equal(frameMockWithId);
+    });
+
+    it('Com o id inexistente responde com o "InvalidMongoId"', async () => {
+      try {
+        await frameModel.destroy('iderrado');
+      } catch (error: any) {
+        expect(error.message).to.be.equal('InvalidMongoId');
+      }
     });
   });
 });
