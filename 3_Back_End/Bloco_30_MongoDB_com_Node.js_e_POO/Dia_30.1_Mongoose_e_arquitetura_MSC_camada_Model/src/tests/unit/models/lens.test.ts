@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { Model } from 'mongoose';
 import Sinon from 'sinon';
 import Lens from '../../../models/Lens';
-import { lensMock, lensMockWithId } from '../../mocks/lensMock';
+import { arrayLensMockWithId, lensMock, lensMockWithId } from '../../mocks/lensMock';
 
 describe('Lens', () => {
   const lensModel = new Lens();
@@ -10,6 +10,7 @@ describe('Lens', () => {
   before(() => {
     Sinon.stub(Model, 'create').resolves(lensMockWithId);
     Sinon.stub(Model, 'findOne').resolves(lensMockWithId);
+    Sinon.stub(Model, 'find').resolves(arrayLensMockWithId);
   });
 
   after(() => {
@@ -37,6 +38,14 @@ describe('Lens', () => {
       } catch (error: any) {
         expect(error.message).to.be.equal('InvalidMongoId');
       }
+    });
+  });
+
+  describe('Buscando todas as lens', () => {
+    it('Trás todas as lens com sucesso', async () => {
+      const result = await lensModel.read();
+
+      expect(result).to.be.deep.equal(arrayLensMockWithId);
     });
   });
 });
