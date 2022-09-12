@@ -9,6 +9,7 @@ describe('Lens', () => {
 
   before(() => {
     Sinon.stub(Model, 'create').resolves(lensMockWithId);
+    Sinon.stub(Model, 'findOne').resolves(lensMockWithId);
   });
 
   after(() => {
@@ -19,7 +20,23 @@ describe('Lens', () => {
     it('Cria com sucesso', async () => {
       const result = await lensModel.create(lensMock);
 
-      expect(result).to.be.equal(lensMockWithId);
+      expect(result).to.be.deep.equal(lensMockWithId);
+    });
+  });
+
+  describe('Buscando uma lente pelo id', () => {
+    it('Com o id existente responde com o objeto certo', async () => {
+      const result = await lensModel.readOne('62cf1fc6498565d94eba52cd');
+
+      expect(result).to.be.deep.equal(lensMockWithId);
+    });
+
+    it('Com o id inexistente responde com o "InvalidMongoId"', async () => {
+      try {
+        await lensModel.readOne('iderrado');
+      } catch (error: any) {
+        expect(error.message).to.be.equal('InvalidMongoId');
+      }
     });
   });
 });
