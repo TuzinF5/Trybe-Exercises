@@ -4,7 +4,11 @@ import { ZodError } from 'zod';
 import { ErrorTypes } from '../../../errors/catalog';
 import FrameModel from '../../../models/Frame';
 import FrameService from '../../../services/Frame';
-import { frameMock, frameMockWithId } from '../../mocks/frameMock';
+import {
+  arrayFrameMockWithId,
+  frameMock,
+  frameMockWithId,
+} from '../../mocks/frameMock';
 
 describe('Frame Service', () => {
   const frameModel = new FrameModel();
@@ -20,6 +24,8 @@ describe('Frame Service', () => {
       // já na próxima chamada ele vai mudar seu retorno, isso pode ser feito várias vezes
       .onCall(1)
       .resolves(null);
+
+    sinon.stub(frameModel, 'getAll').resolves(arrayFrameMockWithId);
   });
   after(() => {
     sinon.restore();
@@ -45,7 +51,9 @@ describe('Frame Service', () => {
 
   describe('ReadOne Frame', () => {
     it('Success', async () => {
-      const frameCreated = await frameService.readOne('62cf1fc6498565d94eba52cd');
+      const frameCreated = await frameService.readOne(
+        '62cf1fc6498565d94eba52cd'
+      );
 
       expect(frameCreated).to.be.deep.equal(frameMockWithId);
     });
@@ -61,6 +69,14 @@ describe('Frame Service', () => {
 
       expect(error, 'error should be defined').not.to.be.undefined;
       expect(error.message).to.be.deep.equal(ErrorTypes.EntityNotFound);
+    });
+  });
+
+  describe('Ler todos os frames', () => {
+    it('Tras todos os frames com sucesso', async () => {
+      const frames = await frameService.getAll();
+
+      expect(frames).to.be.deep.equal(arrayFrameMockWithId);
     });
   });
 });
