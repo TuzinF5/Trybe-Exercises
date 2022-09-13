@@ -24,4 +24,9 @@ export default class FrameController {
     const result = await this._service.readOne(req.params.id);
     return res.status(200).json(result);
   }
+
+  public async getAll(_req: Request, res: Response<IFrame[] | null>) {
+    const frames = await this._service.getAll();
+    return res.status(200).json(frames);
+  }
 }

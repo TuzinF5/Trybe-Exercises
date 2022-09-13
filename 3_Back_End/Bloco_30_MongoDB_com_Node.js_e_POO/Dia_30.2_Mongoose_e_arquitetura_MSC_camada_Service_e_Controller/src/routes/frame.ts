@@ -13,4 +13,6 @@ route.post('/frame', (req, res) => frameController.create(req, res));
 
 route.get('/frame/:id', (req, res) => frameController.readOne(req, res));
 
+route.get('/frames', (req, res) => frameController.getAll(req, res));
+
 export default route;
