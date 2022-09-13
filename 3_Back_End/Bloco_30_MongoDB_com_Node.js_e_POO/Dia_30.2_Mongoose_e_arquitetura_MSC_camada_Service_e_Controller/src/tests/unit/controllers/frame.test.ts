@@ -1,14 +1,17 @@
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { NextFunction, Request, Response } from 'express';
-import { frameMock, frameMockWithId } from '../../mocks/frameMock';
+import {
+  arrayFrameMockWithId,
+  frameMock,
+  frameMockWithId,
+} from '../../mocks/frameMock';
 import FrameController from '../../../controllers/Frame';
 import FrameService from '../../../services/Frame';
 import FrameModel from '../../../models/Frame';
 
-
 describe('Frame Controller', () => {
-  const frameModel = new FrameModel()
+  const frameModel = new FrameModel();
   const frameService = new FrameService(frameModel);
   const frameController = new FrameController(frameService);
   // fazemos o cast de um objeto para um `Request` pois nosso controller só vai aceitar um objeto do tipo `Request` como primeiro parâmetro
@@ -19,14 +22,15 @@ describe('Frame Controller', () => {
   before(() => {
     sinon.stub(frameService, 'create').resolves(frameMock);
     sinon.stub(frameService, 'readOne').resolves(frameMock);
+    sinon.stub(frameService, 'getAll').resolves(arrayFrameMockWithId);
 
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns(res);
   });
 
   after(() => {
-    sinon.restore()
-  })
+    sinon.restore();
+  });
 
   describe('Create Frame', () => {
     it('Success', async () => {
@@ -48,6 +52,15 @@ describe('Frame Controller', () => {
 
       expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
       expect((res.json as sinon.SinonStub).calledWith(frameMock)).to.be.true;
+    });
+  });
+
+  describe('Ler todos os frames', () => {
+    it('Tras todos os frames com sucesso e o status 200', async () => {
+      await frameController.getAll(req, res);
+
+      expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
+      expect((res.json as sinon.SinonStub).calledWith(arrayFrameMockWithId)).to.be.true;
     });
   });
 });
