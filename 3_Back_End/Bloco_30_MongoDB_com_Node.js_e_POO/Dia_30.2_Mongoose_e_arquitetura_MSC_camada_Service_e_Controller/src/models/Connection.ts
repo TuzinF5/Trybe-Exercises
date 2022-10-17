@@ -10,11 +10,13 @@ import mongoose from 'mongoose';
 //   dbName: 'glassesStore', // Define qual banco de dados vou utilizar.
 // };
 
-// connect('mongodb://localhost:27017/', options);
+// mongoose.connect('mongodb://localhost:27017/', options);
 
 const connectToDatabase = (
   mongoDatabaseURI = process.env.MONGO_URI
-    || 'mongodb://root:example@localhost:27017/glassesStore?authSource=admin',
+    // || 'mongodb://root:example@localhost:27017/glassesStore?authSource=admin',
+    || `mongodb://127.0.0.1:27017/
+    ?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.3.1`,
 ) => mongoose.connect(mongoDatabaseURI);
 
 export default connectToDatabase;
