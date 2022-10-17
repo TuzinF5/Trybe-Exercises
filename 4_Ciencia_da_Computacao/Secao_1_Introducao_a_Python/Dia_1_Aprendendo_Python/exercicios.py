@@ -15,3 +15,14 @@ def calculate_the_average(list_of_numbers):
 
 
 print(calculate_the_average([2, 4, 6, 8, 10]))
+
+
+# Exercicio 3
+def print_square(num):
+    index = 0
+    while index < num:
+        print("*" * num)
+        index += 1
+
+
+print_square(2)
