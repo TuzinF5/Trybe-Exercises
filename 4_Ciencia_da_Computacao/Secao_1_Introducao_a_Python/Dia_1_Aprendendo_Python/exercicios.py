@@ -42,3 +42,22 @@ print(
         ["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]
     )
 )
+
+
+# Exercicio 6
+def what_type_of_triangle(side1, side2, side3):
+    if (
+        side1 + side2 <= side3
+        or side1 + side3 <= side2
+        or side2 + side3 <= side1
+    ):
+        return "não é triangulo"
+    elif side1 == side2 == side3:
+        return "Triângulo Equilátero"
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        return "Triângulo Isósceles"
+    elif side1 != side2 != side3:
+        return "Triângulo Escaleno"
+
+
+print(what_type_of_triangle(1, 2, 3))
