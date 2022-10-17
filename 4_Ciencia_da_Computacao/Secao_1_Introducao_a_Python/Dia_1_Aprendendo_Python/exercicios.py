@@ -26,3 +26,19 @@ def print_square(num):
 
 
 print_square(2)
+
+
+# Exercicio 4
+def returns_the_name_with_the_most_characters(name_list):
+    biggest_name = ""
+    for name in name_list:
+        if len(name) > len(biggest_name):
+            biggest_name = name
+    return biggest_name
+
+
+print(
+    returns_the_name_with_the_most_characters(
+        ["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]
+    )
+)
