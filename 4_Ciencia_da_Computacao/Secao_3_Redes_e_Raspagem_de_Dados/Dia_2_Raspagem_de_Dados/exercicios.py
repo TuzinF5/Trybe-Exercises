@@ -1,4 +1,5 @@
 import requests
+import re
 from parsel import Selector
 
 # Exercicio 1
@@ -40,3 +41,14 @@ url_image = (
 )
 
 print(f"{title}, {price}, {description}, {url_image}")
+
+# Exercicio 5
+# Jeito mais simples
+# available = selector.css(".product_main .availability::text").re_first(r"\d")
+
+# Jeito mais dificil
+stock_text = selector.xpath("//td[contains(text(),'In stock')]/text()").get()
+
+available = re.sub(r"\D", '', stock_text)
+
+print(f"{title}, {price}, {description}, {url_image}, {available}")
